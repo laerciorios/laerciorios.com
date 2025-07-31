@@ -1,0 +1,11 @@
+.formation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.formation-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

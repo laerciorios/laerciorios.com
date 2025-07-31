@@ -1,0 +1,31 @@
+.language-switch__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.language-switch__item {
+  padding: 0.25rem 0.5rem;
+  border-top: 0.1rem solid var(--background);
+  cursor: pointer;
+  background-color: var(--primary);
+  color: var(--background);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.language-switch__item p {
+  text-align: left;
+}
+
+.language-switch__item:hover {
+  background-color: var(--secondary);
+}
+
+.language-switch__item:first-child {
+  border-top: none;
+}
+
+.language-switch__item--active {
+  background-color: var(--tertiary);
+}

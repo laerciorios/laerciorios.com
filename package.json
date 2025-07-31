@@ -1,36 +1,39 @@
 {
-  "name": "laerciorios.com",
+  "name": "personal-website-v2",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "i18next": "^23.6.0",
-    "i18next-browser-languagedetector": "^7.1.0",
-    "i18next-http-backend": "^2.2.2",
-    "moment": "^2.29.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^13.3.1",
-    "react-router-dom": "^6.17.0",
-    "styled-components": "^6.1.0",
-    "vite-plugin-svgr": "^4.1.0"
+    "i18next": "^23.14.0",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "next": "^14.2.13",
+    "next-themes": "^0.3.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-i18next": "^15.0.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "@vitejs/plugin-react": "^4.0.3",
-    "eslint": "^8.45.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "^22.5.0",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.6",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-chai-friendly": "^1.0.1",
+    "eslint-plugin-cypress": "^3.5.0",
+    "eslint-plugin-import-helpers": "^1.3.1",
+    "eslint-plugin-no-only-tests": "^3.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "prettier": "^3.3.3",
+    "typescript": "^5"
   }
 }

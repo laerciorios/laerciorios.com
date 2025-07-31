@@ -1,0 +1,114 @@
+.projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-main {
+  min-height: 100vh;
+  width: 85%;
+  max-width: 70rem;
+}
+
+.projects-main h1 {
+  text-align: left;
+}
+
+.projects-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.projects-list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.125rem solid var(--primary);
+}
+
+.projects-list-item-imageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-list-item-imageContainer-btn {
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: none;
+}
+
+.projects-list-item-imageContainer-btn svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.projects-list-item-imageContainer-btn svg path {
+  fill: var(--primary);
+  transition: var(--transition);
+}
+
+.projects-list-item-imageContainer-btn svg:hover path {
+  fill: var(--secondary);
+}
+
+.projects-list-item img {
+  width: 70%;
+  height: auto;
+}
+
+.projects-list-item:last-child {
+  border-bottom: none;
+}
+
+.projects-list-item-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.projects-list-item-link svg {
+  width: 2rem;
+}
+
+.projects-list-item-link svg path {
+  fill: var(--primary);
+  transition: var(--transition);
+}
+
+.projects-list-item-link svg:hover path {
+  fill: var(--secondary);
+}
+
+.projects-list-item-skills_list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.projects-list-item-skills_list li {
+  display: flex;
+  padding: 0.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tertiary);
+  border-radius: 1.5rem;
+}

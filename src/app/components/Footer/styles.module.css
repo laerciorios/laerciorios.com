@@ -1,0 +1,44 @@
+.footer {
+  width: 100%;
+  border-top: 0.125rem solid var(--primary);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+  width: 100%;
+  max-width: 90rem;
+  padding: 1rem 2rem;
+}
+.footer-wrapper ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-wrapper li svg {
+  width: 2rem;
+  height: 2rem;
+
+  @media (min-width: 768px) {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.footer-wrapper li svg path {
+  fill: var(--primary);
+  transition: var(--transition);
+}
+
+.footer-wrapper li:hover svg path {
+  fill: var(--secondary);
+}
