@@ -1,8 +1,0 @@
-{
-  "recommendations": [
-    "EditorConfig.EditorConfig",
-    "dbaeumer.vscode-eslint",
-    "github.vscode-github-actions",
-    "clinyong.vscode-css-modules"
-  ]
-}
