@@ -13,6 +13,16 @@ interface Project {
 
 export const projects: Project[] = [
   {
+    title: "portfolioV3",
+    link: "https://v3.laerciorios.com/",
+    repository: "https://github.com/laerciorios/laerciorios.com",
+    year: "2026",
+    skills: ["Next.Js", "TypeScript", "Figma"],
+    type: "personal",
+    images: [],
+    highlight: false,
+  },
+  {
     title: "theLegacyOfManoel",
     year: "2025",
     skills: ["Godot", "GDScript"],
@@ -44,7 +54,7 @@ export const projects: Project[] = [
     year: "2025",
     skills: ["Node.JS", "TypeScript", "PostgreSQL", "Express", "Jest"],
     type: "personal",
-    repository: "https://github.com/LaercioSR/url-shortener",
+    repository: "https://github.com/laerciorios/url-shortener",
     images: [],
     highlight: false,
   },
@@ -59,18 +69,18 @@ export const projects: Project[] = [
   },
   {
     title: "portfolioV2",
-    link: "https://laerciorios.com/",
-    repository: "https://github.com/LaercioSR/personal-website-v2",
+    link: "https://v2.laerciorios.com/",
+    repository: "https://github.com/laerciorios/laerciorios.com/tree/v2",
     year: "2024",
     skills: ["Next.Js", "TypeScript", "Figma"],
     type: "personal",
-    images: [],
+    images: ["home.png"],
     highlight: false,
   },
   {
     title: "semesterUefs",
     link: "https://semestreuefs.laerciorios.com/",
-    repository: "https://github.com/LaercioSR/semester-uefs",
+    repository: "https://github.com/laerciorios/semester-uefs",
     year: "2024",
     skills: ["Next.Js", "TypeScript", "Styled Components", "Github Actions"],
     type: "personal",
@@ -80,7 +90,7 @@ export const projects: Project[] = [
   {
     title: "portfolioV1",
     link: "https://v1.laerciorios.com/",
-    repository: "https://github.com/LaercioSR/laerciorios.com",
+    repository: "https://github.com/laerciorios/laerciorios.com/tree/v1",
     year: "2023",
     skills: ["React", "TypeScript", "Styled Components"],
     type: "personal",
@@ -89,7 +99,7 @@ export const projects: Project[] = [
   },
   {
     title: "ondeAssistir",
-    repository: "https://github.com/LaercioSR/onde-assistir-front",
+    repository: "https://github.com/laerciorios/onde-assistir-front",
     year: "2023",
     skills: ["React", "Node.JS", "TypeScript", "Web Scraping"],
     type: "academic",
