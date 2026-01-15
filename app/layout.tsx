@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
+import { ThemeProvider } from "next-themes";
 
 const spaceMono = Space_Mono({
   variable: "--font-space-mono",
@@ -19,11 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
-      <body className={`${spaceMono.variable}`}>{children}</body>
+      <body className={`${spaceMono.variable}`}>
+        <ThemeProvider>
+          <Header />
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

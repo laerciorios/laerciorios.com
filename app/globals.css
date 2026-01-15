@@ -9,17 +9,15 @@
   --tertiary-hover: #4b5563;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #100000;
-    --hover: #2a0505;
-    --primary: #ffe5e5;
-    --primary-hover: #ffc4c4;
-    --secondary: #d1d5db;
-    --secondary-hover: #ffffff;
-    --tertiary: #6b7280;
-    --tertiary-hover: #9ca3af;
-  }
+[data-theme="dark"] {
+  --background: #100000;
+  --hover: #2a0505;
+  --primary: #ffe5e5;
+  --primary-hover: #ffc4c4;
+  --secondary: #d1d5db;
+  --secondary-hover: #ffffff;
+  --tertiary: #6b7280;
+  --tertiary-hover: #9ca3af;
 }
 
 html,
@@ -30,7 +28,7 @@ body {
 
 body {
   color: var(--primary);
-  background: var(--background);
+  background-color: var(--background);
   font-family: "Space Mono", monospace, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
