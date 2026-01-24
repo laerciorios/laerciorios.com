@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
 import "./globals.css";
 import Header from "./components/Header";
 import { ThemeProvider } from "next-themes";
@@ -15,21 +17,26 @@ export const metadata: Metadata = {
   description: "Portfolio website of Laercio Rios",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
-    <html suppressHydrationWarning>
+    <html lang={locale} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
       <body className={`${spaceMono.variable}`}>
-        <ThemeProvider>
-          <Header />
-          {children}
-        </ThemeProvider>
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
+            <Header />
+            {children}
+          </ThemeProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

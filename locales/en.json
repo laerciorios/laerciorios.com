@@ -1,0 +1,13 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About", 
+    "projects": "Projects",
+    "articles": "Articles"
+  },
+  "language": {
+    "portuguese": "Português",
+    "english": "English", 
+    "switch": "Switch language"
+  }
+}
