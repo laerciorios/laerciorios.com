@@ -10,7 +10,7 @@
   justify-content: center;
   align-items: center;
 
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition-default);
 }
 
 .button-custom:hover {
@@ -20,7 +20,7 @@
 .button-custom svg {
   width: 1.5rem;
   height: 1.5rem;
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition-default);
 }
 
 .button-custom svg > path {

@@ -2,8 +2,8 @@
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 
-import { DarkIcon, LightIcon } from "../../icons";
-import ButtonCustom from "../../ButtonCustom";
+import { DarkIcon, LightIcon } from "../../../icons";
+import ButtonCustom from "../../../ButtonCustom";
 
 export default function ThemeSwitchButton() {
   const t = useTranslations("theme");
@@ -18,10 +18,6 @@ export default function ThemeSwitchButton() {
   }
 
   return (
-    <ButtonCustom
-      icon={icon}
-      onClick={toggleTheme}
-      aria-label={ariaLabel}
-    />
+    <ButtonCustom icon={icon} onClick={toggleTheme} aria-label={ariaLabel} />
   );
 }

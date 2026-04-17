@@ -16,7 +16,7 @@
   gap: 0.25rem;
 
   color: var(--text-primary);
-  transition: all 0.2s ease-in-out;
+  transition: var(--transition-default);
 }
 
 .languageButton:hover {
@@ -34,15 +34,8 @@
   stroke: currentColor;
 }
 
-.localeLabel {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  line-height: 1;
-  letter-spacing: 0.02em;
-}
-
 .chevron {
-  transition: transform 0.2s ease-in-out;
+  transition: var(--transition-default);
 }
 
 .chevronOpen {
@@ -84,7 +77,7 @@
   cursor: pointer;
   color: var(--text-primary);
   font-size: 0.875rem;
-  transition: all 0.15s ease-in-out;
+  transition: var(--transition-fast);
   display: flex;
   justify-content: space-between;
   align-items: center;

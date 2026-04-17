@@ -1,21 +1,27 @@
 .header {
-  display: grid;
-  grid-template-areas:
-    "left right"
-    "center center";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+  padding: 0 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
 
-  @media (min-width: 768px) {
-    height: 3.5rem;
+@media (min-width: 768px) {
+  .header {
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
     padding: 0 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 }
 
 .leftSection {
-  grid-area: left;
-  padding: 0.25rem 1.25rem;
+  display: flex;
+  align-items: center;
   height: 2.5rem;
 }
 
@@ -26,19 +32,35 @@
   gap: 0.625rem;
 }
 
+.logoName {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}
+
 .centerSection {
-  grid-area: center;
-  display: flex;
-  justify-content: center;
-  padding: 0 1.25rem;
+  display: none;
+  gap: 0.25rem;
+
+  @media (min-width: 1024px) {
+    display: flex;
+  }
 }
 
 .rightSection {
-  grid-area: right;
-  padding: 0.25rem 1.25rem;
   height: 2.5rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 0.5rem;
+}
+
+.menuButton {
+  display: flex;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
