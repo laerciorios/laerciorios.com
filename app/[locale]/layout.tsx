@@ -42,7 +42,7 @@ export default async function LocaleLayout({
       </head>
       <body className={`${spaceMono.variable}`}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProvider>
+          <ThemeProvider attribute="data-theme">
             <Header />
             {children}
           </ThemeProvider>
