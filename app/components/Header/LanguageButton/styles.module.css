@@ -3,14 +3,62 @@
   display: inline-block;
 }
 
+.languageButton {
+  cursor: pointer;
+  height: 2rem;
+  padding: 0 0.5rem;
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.375rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  color: var(--text-primary);
+  transition: all 0.2s ease-in-out;
+}
+
+.languageButton:hover {
+  background-color: var(--color-surface);
+  color: var(--text-primary-strong);
+}
+
+.languageButton svg {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.languageButton svg > path {
+  stroke: currentColor;
+}
+
+.localeLabel {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+.chevron {
+  transition: transform 0.2s ease-in-out;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
 .dropdown {
   position: absolute;
   top: calc(100% + 0.5rem);
   right: 0;
-  background: var(--background);
-  border: 1px solid var(--border);
+  background: var(--color-bg);
+  border: 1px solid var(--border-subtle);
   border-radius: 0.5rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
   min-width: 120px;
   z-index: 50;
   overflow: hidden;
@@ -34,7 +82,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  color: var(--primary);
+  color: var(--text-primary);
   font-size: 0.875rem;
   transition: all 0.15s ease-in-out;
   display: flex;
@@ -43,30 +91,30 @@
 }
 
 .dropdownItem:hover {
-  background-color: var(--hover);
-  color: var(--primary-hover);
+  background-color: var(--color-surface);
+  color: var(--text-primary-strong);
 }
 
 .dropdownItem:focus {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--brand);
   outline-offset: -2px;
 }
 
 .dropdownItem.active {
-  background-color: var(--accent-light);
-  color: var(--accent);
+  background-color: var(--brand-soft);
+  color: var(--brand);
   font-weight: 500;
 }
 
 .dropdownItem.active:hover {
-  background-color: var(--accent-light);
-  color: var(--accent);
+  background-color: var(--brand-soft);
+  color: var(--brand);
 }
 
 .checkmark {
   font-size: 0.75rem;
   margin-left: 0.5rem;
-  color: var(--accent);
+  color: var(--brand);
 }
 
 /* Mobile responsiveness */
@@ -76,7 +124,7 @@
     left: auto;
     min-width: 100px;
   }
-  
+
   .dropdownItem {
     padding: 0.625rem 0.75rem;
     font-size: 0.8125rem;

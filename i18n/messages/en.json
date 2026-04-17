@@ -1,0 +1,27 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "articles": "Articles"
+  },
+  "language": {
+    "switch": "Switch language"
+  },
+  "theme": {
+    "switchToDark": "Switch to dark theme",
+    "switchToLight": "Switch to light theme"
+  },
+  "common": {
+    "readMore": "Read more",
+    "viewProject": "View project",
+    "backToTop": "Back to top"
+  },
+  "home": {
+    "heroTitle": "Hi, I'm Laercio Rios",
+    "heroSubtitle": "Software developer building products with care."
+  },
+  "about": {},
+  "projects": {},
+  "articles": {}
+}

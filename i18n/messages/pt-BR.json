@@ -1,0 +1,27 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "articles": "Artigos"
+  },
+  "language": {
+    "switch": "Alterar idioma"
+  },
+  "theme": {
+    "switchToDark": "Mudar para tema escuro",
+    "switchToLight": "Mudar para tema claro"
+  },
+  "common": {
+    "readMore": "Ler mais",
+    "viewProject": "Ver projeto",
+    "backToTop": "Voltar ao topo"
+  },
+  "home": {
+    "heroTitle": "Olá, sou Laercio Rios",
+    "heroSubtitle": "Desenvolvedor de software construindo produtos com cuidado."
+  },
+  "about": {},
+  "projects": {},
+  "articles": {}
+}

@@ -3,8 +3,8 @@
   width: 2rem;
   height: 2rem;
   background: transparent;
-  border: none;
-  border-radius: 0.25rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.375rem;
 
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@
 }
 
 .button-custom:hover {
-  background-color: var(--hover);
+  background-color: var(--color-surface);
 }
 
 .button-custom svg {
@@ -24,9 +24,9 @@
 }
 
 .button-custom svg > path {
-  stroke: var(--primary);
+  stroke: var(--text-primary);
 }
 
 .button-custom:hover svg > path {
-  stroke: var(--primary-hover);
+  stroke: var(--text-primary-strong);
 }

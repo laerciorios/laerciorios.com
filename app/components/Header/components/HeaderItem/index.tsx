@@ -10,7 +10,7 @@ interface HeaderItemProps {
 export default function HeaderItem({ text, href }: HeaderItemProps) {
   return (
     <Link href={href} className={styles.headerItem}>
-      <Typography variant="body2">{text}</Typography>
+      <Typography variant="body2" as="span">{text}</Typography>
     </Link>
   );
 }

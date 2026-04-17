@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
-import "./globals.css";
-import Header from "./components/Header";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { hasLocale } from "next-intl";
+import { locales } from "@/i18n/config";
+import "../globals.css";
+import Header from "../components/Header";
 import { ThemeProvider } from "next-themes";
 
 const spaceMono = Space_Mono({
@@ -17,12 +20,19 @@ export const metadata: Metadata = {
   description: "Portfolio website of Laercio Rios",
 };
 
-export default async function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
-  const locale = await getLocale();
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  if (!hasLocale(locales, locale)) {
+    notFound();
+  }
+
   const messages = await getMessages();
 
   return (

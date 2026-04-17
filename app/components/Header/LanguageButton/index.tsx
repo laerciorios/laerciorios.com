@@ -1,11 +1,10 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "@/i18n/navigation";
 
-import { Languages } from "../../icons";
-import ButtonCustom from "../../ButtonCustom";
-import { languages } from "../../../../i18n/config";
+import { Languages, ChevronDown } from "../../icons";
+import { languages, type Locale } from "../../../../i18n/config";
 import styles from "./styles.module.css";
 
 export default function LanguageButton() {
@@ -14,19 +13,18 @@ export default function LanguageButton() {
 	const buttonRef = useRef<HTMLDivElement>(null);
 	const locale = useLocale();
 	const router = useRouter();
+	const pathname = usePathname();
 	const t = useTranslations("language");
 
 	function toggleDropdown() {
 		setIsDropdownOpen(!isDropdownOpen);
 	}
 
-	function handleLanguageChange(languageCode: string) {
-		document.cookie = `NEXT_LOCALE=${languageCode}; path=/; max-age=31536000; SameSite=Lax`;
-		router.refresh();
+	function handleLanguageChange(languageCode: Locale) {
+		router.replace(pathname, { locale: languageCode });
 		setIsDropdownOpen(false);
 	}
 
-	// Close dropdown when clicking outside
 	useEffect(() => {
 		function handleClickOutside(event: MouseEvent) {
 			if (
@@ -47,7 +45,6 @@ export default function LanguageButton() {
 		}
 	}, [isDropdownOpen]);
 
-	// Close dropdown on escape key
 	useEffect(() => {
 		function handleEscape(event: KeyboardEvent) {
 			if (event.key === "Escape") {
@@ -63,13 +60,21 @@ export default function LanguageButton() {
 		}
 	}, [isDropdownOpen]);
 
+	const localeLabel = locale.split("-")[0].toUpperCase();
+
 	return (
 		<div className={styles.languageButtonContainer} ref={buttonRef}>
-			<ButtonCustom
-				icon={<Languages />}
+			<button
+				className={styles.languageButton}
 				onClick={toggleDropdown}
 				aria-label={t("switch")}
-			/>
+			>
+				<Languages />
+				<span className={styles.localeLabel}>{localeLabel}</span>
+				<ChevronDown
+					className={`${styles.chevron} ${isDropdownOpen ? styles.chevronOpen : ""}`}
+				/>
+			</button>
 
 			{isDropdownOpen && (
 				<div

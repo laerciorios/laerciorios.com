@@ -1,23 +1,32 @@
-:root {
-  --background: #fffefe;
-  --hover: #f2e6e6;
-  --primary: #2a0a0a;
-  --primary-hover: #5c1414;
-  --secondary: #374151;
-  --secondary-hover: #111827;
-  --tertiary: #9ca3af;
-  --tertiary-hover: #4b5563;
+:root,
+[data-theme="light"] {
+  --color-bg: #fff8f6;
+  --color-surface: #fbe8e5;
+  --text-primary: #2e1415;
+  --text-primary-strong: #4a1f23;
+  --text-secondary: #625354;
+  --text-secondary-strong: #3d3233;
+  --text-muted: #958484;
+  --text-muted-strong: #6f6161;
+  --border-subtle: #e4cfca;
+  --brand: #be2f3f;
+  --brand-soft: #f7d8dd;
+
 }
 
 [data-theme="dark"] {
-  --background: #100000;
-  --hover: #2a0505;
-  --primary: #ffe5e5;
-  --primary-hover: #ffc4c4;
-  --secondary: #d1d5db;
-  --secondary-hover: #ffffff;
-  --tertiary: #6b7280;
-  --tertiary-hover: #9ca3af;
+  --color-bg: #100000;
+  --color-surface: #251014;
+  --text-primary: #f9e9ea;
+  --text-primary-strong: #ffd3d7;
+  --text-secondary: #ccb9bd;
+  --text-secondary-strong: #f3e8ea;
+  --text-muted: #8f7d82;
+  --text-muted-strong: #b8a8ac;
+  --border-subtle: #3a2229;
+  --brand: #e14a5d;
+  --brand-soft: #522630;
+  color-scheme: dark;
 }
 
 html,
@@ -27,8 +36,8 @@ body {
 }
 
 body {
-  color: var(--primary);
-  background-color: var(--background);
+  color: var(--text-primary);
+  background-color: var(--color-bg);
   font-family: "Space Mono", monospace, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -43,10 +52,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }

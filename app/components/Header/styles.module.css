@@ -19,6 +19,13 @@
   height: 2.5rem;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
 .centerSection {
   grid-area: center;
   display: flex;
