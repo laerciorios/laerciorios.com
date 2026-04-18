@@ -1,4 +1,4 @@
-interface Project {
+export interface Project {
   title: string;
   link?: string;
   repository?: string;

@@ -23,7 +23,60 @@
   },
   "about": {},
   "projects": {
-    "title": "FULL PORTFOLIO"
+    "title": "FULL PORTFOLIO",
+    "types": {
+      "personal": { "label": "Personal" },
+      "professional": { "label": "Professional" },
+      "academic": { "label": "Academic" }
+    },
+    "portfolioV3": {
+      "title": { "label": "Personal Website v3" },
+      "description": { "label": "Third version of my personal website." }
+    },
+    "theLegacyOfManoel": {
+      "title": { "label": "The Legacy of Manoel" },
+      "description": { "label": "An short narrative game. The game tells the story of the first residents of the city of Pintadas in Brazil with minigame excerpts between scenes. On this project I worked alone, as a game designer and programmer, in addition to creating the art." }
+    },
+    "ecope": {
+      "title": { "label": "Ecological-Economic Platform of Pernambuco" },
+      "description": { "label": "Award-winning platform from MapBiomas, the project integrates geospatial data and information about Pernambuco's environment, improving state environmental management processes, with an emphasis on environmental monitoring, licensing, and oversight. On this project, I worked on the front end, building and maintaining pages and components, as well as integrating with the API." }
+    },
+    "urlShortener": {
+      "title": { "label": "API for URL Shortener" },
+      "description": { "label": "A simple API for URL shortening. The project was developed with the aim of practicing the development of Restful APIs, using Node.js and TypeScript. The API allows URL shortening, storage in a database and redirection to the original URL." }
+    },
+    "libScrapper": {
+      "title": { "label": "Internal Web Scraping Lib" },
+      "description": { "label": "Library to automate internal web scraping processes. Obtaining data efficiently and reusably for various internal projects." }
+    },
+    "portfolioV2": {
+      "title": { "label": "Personal Website v2" },
+      "description": { "label": "The second version of my personal website. The site was developed with the purpose of showcasing my skills and experiences, as well as serving as a portfolio for my projects. I also took the opportunity to apply my design knowledge." }
+    },
+    "semesterUefs": {
+      "title": { "label": "Semester UEFS" },
+      "description": { "label": "Platform with a countdown to the end of the academic semester at University in Feira de Santana, along with a calendar featuring automatic updates to assist the academic community." }
+    },
+    "portfolioV1": {
+      "title": { "label": "Personal Website v1" },
+      "description": { "label": "First version of my personal website. It is currently outdated." }
+    },
+    "ondeAssistir": {
+      "title": { "label": "Onde Assistir (Where to Watch)" },
+      "description": { "label": "Platform that gathers information on where to watch live football matches, based on services available in Brazil. Developed as an academic project." }
+    },
+    "ppbio": {
+      "title": { "label": "PPBio" },
+      "description": { "label": "Platform featuring a listing of projects for fundraising, focused on the Legal Amazon region. I contributed by developing the API." }
+    },
+    "rhisa": {
+      "title": { "label": "Rhisa" },
+      "description": { "label": "Platform focused on creating a network of researchers working in the Legal Amazon region. I contributed to the development of the API and data scraping." }
+    },
+    "leadbase": {
+      "title": { "label": "Leadbase" },
+      "description": { "label": "Data management platform for pharmacies." }
+    }
   },
   "articles": {
     "title": "MY ARTICLES",
