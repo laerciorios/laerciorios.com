@@ -6,6 +6,10 @@ import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { locales } from "@/i18n/config";
 import "../globals.css";
+
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { ThemeProvider } from "next-themes";
