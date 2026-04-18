@@ -17,6 +17,7 @@ export { LightIcon } from "./LightIcon";
 export { Link } from "./Link";
 export { Linkedin } from "./Linkedin";
 export { Mail } from "./Mail";
+export { Newspaper } from "./Newspaper";
 export { Menu } from "./Menu";
 export { Play } from "./Play";
 export { Senai } from "./Senai";

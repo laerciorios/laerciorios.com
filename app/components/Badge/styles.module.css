@@ -1,0 +1,13 @@
+.badge {
+  display: flex;
+  padding: 0.25rem 0.5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--color-surface);
+}
+
+.label {
+  color: var(--brand) !important;
+}

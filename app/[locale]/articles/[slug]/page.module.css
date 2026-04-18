@@ -1,0 +1,83 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--brand);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: var(--transition-fast);
+}
+
+.back:hover {
+  opacity: 0.75;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  border-bottom: var(--border);
+  margin-bottom: 2rem;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.date {
+  color: var(--text-muted-strong) !important;
+}
+
+.dot {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.title {
+  text-align: left;
+  color: var(--text-primary) !important;
+}
+
+.description {
+  text-align: left;
+  color: var(--text-secondary) !important;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 70ch;
+}
+
+.paragraph {
+  text-align: left;
+  line-height: 1.75;
+  color: var(--text-secondary-strong) !important;
+}
+
+.body h1,
+.body h2,
+.body h3,
+.body h4 {
+  margin-top: 1rem;
+}
+
+.link {
+  color: var(--brand);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: var(--transition-fast);
+}
+
+.link:hover {
+  opacity: 0.75;
+}

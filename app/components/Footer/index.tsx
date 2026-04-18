@@ -112,7 +112,7 @@ export default async function Footer() {
         </div>
         <div className={styles.bottom}>
           <Typography variant="body3" className={styles.copyright}>
-            {year} {tFooter("authorName")}
+            {year} <span aria-hidden="true">·</span> {tFooter("authorName")}
           </Typography>
         </div>
       </div>

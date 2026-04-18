@@ -26,7 +26,11 @@
     "title": "FULL PORTFOLIO"
   },
   "articles": {
-    "title": "MY ARTICLES"
+    "title": "MY ARTICLES",
+    "pageTitle": "Articles",
+    "emptyState": "No articles yet. Check back soon.",
+    "publishedOn": "Published on",
+    "backToArticles": "Back to articles"
   },
   "footer": {
     "description": "Full-stack developer and designer creating beautiful, functional web experiences.",
