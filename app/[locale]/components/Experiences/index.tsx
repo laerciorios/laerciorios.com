@@ -1,14 +1,35 @@
-import { getTranslations, getFormatter } from "next-intl/server";
+import { getTranslations, getFormatter, getLocale } from "next-intl/server";
 import { experiences } from "@/data/experiences";
+import Typography from "@/app/components/Typography";
+import { ArrowRight } from "@/app/components/icons";
 import ExperienceCard from "./ExperienceCard";
 import styles from "./styles.module.css";
 
 export default async function Experiences() {
   const t = await getTranslations("experiences");
+  const tHome = await getTranslations("home");
   const format = await getFormatter();
+  const locale = await getLocale();
+
+  const cvFile = locale === "pt-BR" ? "pt" : "en";
 
   return (
-    <div className={styles.list}>
+    <div className={styles.wrapper}>
+      <div className={styles.header}>
+        <Typography variant="h2" as="h2" className={styles.title}>
+          {tHome("experiencesTitle")}
+        </Typography>
+        <a
+          href={`/cv/${cvFile}.pdf`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.cvLink}
+        >
+          {t("seeFullResume")}
+          <ArrowRight width={24} height={24} />
+        </a>
+      </div>
+      <div className={styles.list}>
       {experiences.map((exp, index) => {
         const startFormatted = format.dateTime(exp.startDate, "monthYear");
         const endFormatted = exp.endDate
@@ -37,6 +58,7 @@ export default async function Experiences() {
           />
         );
       })}
+      </div>
     </div>
   );
 }

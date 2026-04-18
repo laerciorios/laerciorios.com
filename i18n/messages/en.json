@@ -21,7 +21,12 @@
     "heroTitle": "Hi, I'm Laercio Rios",
     "heroSubtitle": "Software developer building products with care.",
     "name": "LAERCIO RIOS",
-    "jobTitle": "Software Engineer"
+    "jobTitle": "Software Engineer",
+    "featuredProjectsTitle": "Featured Projects",
+    "seeAllProjects": "See all projects",
+    "experiencesTitle": "Experiences",
+    "formationsTitle": "Formations",
+    "presentationsTitle": "Presentations"
   },
   "about": {},
   "projects": {
@@ -84,6 +89,7 @@
     "seeMore": "See More",
     "seeLess": "See Less",
     "current": "Current",
+    "seeFullResume": "See my full resume",
     "aboutLabel": "About",
     "responsibilitiesLabel": "Main responsibilities",
     "stackLabel": "Technology Stack",
@@ -161,6 +167,23 @@
     "emptyState": "No articles yet. Check back soon.",
     "publishedOn": "Published on",
     "backToArticles": "Back to articles"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "subtitle": "You stepped on a mine. This page doesn't exist.",
+    "backHome": "Go back home"
+  },
+  "minesweeper": {
+    "pageTitle": "Minesweeper",
+    "back": "← Back",
+    "reset": "Reset",
+    "won": "You cleared the field!",
+    "lost": "Boom! You hit a mine.",
+    "hint": "left click: reveal · right click: flag",
+    "difficulties": {
+      "easy": "Easy",
+      "medium": "Medium"
+    }
   },
   "footer": {
     "description": "Full-stack developer and designer creating beautiful, functional web experiences.",

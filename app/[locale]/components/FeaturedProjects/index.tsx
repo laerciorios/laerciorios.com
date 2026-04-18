@@ -8,6 +8,7 @@ import styles from "./styles.module.css";
 
 export default async function FeaturedProjects() {
   const t = await getTranslations("projects");
+  const tHome = await getTranslations("home");
   const locale = await getLocale();
 
   const highlighted = projects.filter((p) => p.highlight);
@@ -16,11 +17,11 @@ export default async function FeaturedProjects() {
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <Typography variant="h2" as="h2" className={styles.title}>
-          Featured Projects
+          {tHome("featuredProjectsTitle")}
         </Typography>
         <NextLink href={`/${locale}/projects`} className={styles.seeAll}>
           <Typography variant="body1" as="span" className={styles.seeAllLabel}>
-            See all projects
+            {tHome("seeAllProjects")}
           </Typography>
           <ArrowRight className={styles.seeAllIcon} aria-hidden />
         </NextLink>

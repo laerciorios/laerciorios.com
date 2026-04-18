@@ -50,18 +50,17 @@ export default async function Home({ params }: HomePageProps) {
           <FeaturedProjects />
         </section>
 
-        <section className={`${styles.section} ${styles.sectionWithTitle}`}>
-          <SectionHeader title="Experiences" />
+        <section className={styles.section}>
           <Experiences />
         </section>
 
         <section className={`${styles.section} ${styles.sectionWithTitle}`}>
-          <SectionHeader title="Formations" />
+          <SectionHeader title={t("formationsTitle")} />
           <Formations locale={locale} />
         </section>
 
         <section className={`${styles.section} ${styles.sectionWithTitle}`}>
-          <SectionHeader title="Presentations" />
+          <SectionHeader title={t("presentationsTitle")} />
           <Presentations locale={locale} />
         </section>
       </div>

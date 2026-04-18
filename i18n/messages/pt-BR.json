@@ -21,11 +21,16 @@
     "heroTitle": "Olá, sou Laercio Rios",
     "heroSubtitle": "Desenvolvedor de software construindo produtos com cuidado.",
     "name": "LAERCIO RIOS",
-    "jobTitle": "Engenheiro de Software"
+    "jobTitle": "Engenheiro de Software",
+    "featuredProjectsTitle": "Projetos em Destaque",
+    "seeAllProjects": "Ver todos os projetos",
+    "experiencesTitle": "Experiências",
+    "formationsTitle": "Formações",
+    "presentationsTitle": "Apresentações"
   },
   "about": {},
   "projects": {
-    "title": "FULL PORTFOLIO",
+    "title": "PORTFÓLIO COMPLETO",
     "types": {
       "personal": { "label": "Pessoal" },
       "professional": { "label": "Profissional" },
@@ -84,6 +89,7 @@
     "seeMore": "Ver mais",
     "seeLess": "Ver menos",
     "current": "Atual",
+    "seeFullResume": "Ver meu currículo completo",
     "aboutLabel": "Sobre",
     "responsibilitiesLabel": "Principais responsabilidades",
     "stackLabel": "Stack de tecnologias",
@@ -154,13 +160,30 @@
     }
   },
   "articles": {
-    "title": "MY ARTICLES",
+    "title": "MEUS ARTIGOS",
     "pageTitle": "Artigos",
     "pageSubtitle": "Em 2025 decidi começar a escrever artigos para compartilhar minhas experiências, principalmente sobre meu trabalho, estudos e hobbies. Atualmente, todos os meus artigos estão disponíveis apenas em português.",
     "allArticles": "Todos os artigos",
     "emptyState": "Nenhum artigo ainda. Volte em breve.",
     "publishedOn": "Publicado em",
     "backToArticles": "Voltar para artigos"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "subtitle": "Você pisou em uma mina. Esta página não existe.",
+    "backHome": "Voltar para início"
+  },
+  "minesweeper": {
+    "pageTitle": "Campo Minado",
+    "back": "← Voltar",
+    "reset": "Reiniciar",
+    "won": "Você limpou o campo!",
+    "lost": "Boom! Você pisou em uma mina.",
+    "hint": "clique esquerdo: revelar · clique direito: bandeira",
+    "difficulties": {
+      "easy": "Fácil",
+      "medium": "Médio"
+    }
   },
   "footer": {
     "description": "Desenvolvedor full-stack e designer criando experiências web bonitas e funcionais.",

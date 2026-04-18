@@ -1,0 +1,201 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.backLink {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: var(--transition-default);
+}
+
+.backLink:hover {
+  color: var(--brand);
+}
+
+.pageTitle {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── Game container ── */
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+  max-width: 100%;
+}
+
+/* ── Stats bar ── */
+
+.statsBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: var(--color-surface);
+  border: var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1rem;
+}
+
+.counter {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand);
+  min-width: 3ch;
+  letter-spacing: 0.05em;
+}
+
+.resetBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  border: var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0.35rem 0.5rem;
+  transition: var(--transition-default);
+}
+
+.resetBtn:hover {
+  border-color: var(--brand);
+}
+
+/* ── Grid ── */
+
+.grid {
+  --cell-size: min(2.25rem, calc((100vw - 3rem) / var(--cols, 9)));
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 9), var(--cell-size));
+  grid-template-rows: repeat(var(--rows, 9), var(--cell-size));
+  gap: 2px;
+  background: var(--border-subtle);
+  border: var(--border);
+  border-radius: var(--radius-md);
+  padding: 2px;
+  overflow: hidden;
+}
+
+/* ── Cell ── */
+
+.cell {
+  width: var(--cell-size);
+  height: var(--cell-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-space-mono), monospace;
+  font-size: calc(var(--cell-size) * 0.44);
+  font-weight: 700;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.08s ease;
+  user-select: none;
+}
+
+.cellHidden {
+  background: var(--color-surface);
+  color: var(--brand);
+}
+
+.cellHidden:hover {
+  filter: brightness(1.15);
+}
+
+.cellRevealed {
+  background: var(--color-bg);
+  cursor: default;
+  color: var(--text-primary);
+}
+
+.cellMine {
+  background: var(--brand-soft);
+  color: var(--brand);
+}
+
+.cellTriggered {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* Number colors */
+.cell[data-num="1"] { color: #3b82f6; }
+.cell[data-num="2"] { color: #22c55e; }
+.cell[data-num="3"] { color: var(--brand); }
+.cell[data-num="4"] { color: #1d4ed8; }
+.cell[data-num="5"] { color: #b91c1c; }
+.cell[data-num="6"] { color: #0891b2; }
+.cell[data-num="7"] { color: var(--text-primary); }
+.cell[data-num="8"] { color: var(--text-muted); }
+
+/* ── Difficulty selector ── */
+
+.difficulties {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.diffBtn {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.diffBtn:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.diffActive {
+  border-color: var(--brand);
+  color: var(--brand);
+  background: var(--brand-soft);
+}
+
+/* ── Status message ── */
+
+.statusMsg {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.statusWon  { color: #22c55e; }
+.statusLost { color: var(--brand); }
+
+/* ── Hint ── */
+
+.hint {
+  font-family: var(--font-space-mono), monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}
