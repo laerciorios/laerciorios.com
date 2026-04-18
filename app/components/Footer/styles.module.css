@@ -4,7 +4,7 @@
 }
 
 .inner {
-  max-width: var(--content-max-width);
+  max-width: calc(var(--content-max-width) + 2 * var(--page-padding-x));
   width: 100%;
   margin: 0 auto;
   padding: 2rem var(--page-padding-x) 0;

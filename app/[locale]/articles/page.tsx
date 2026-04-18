@@ -15,7 +15,7 @@ export default async function Articles({ params }: Props) {
 
   return (
     <>
-      <Typography variant="h1">{t("title")}</Typography>
+      <Typography variant="h1" className={styles.pageTitle}>{t("title")}</Typography>
       {articles.length === 0 ? (
         <Typography variant="body1" className={styles.empty}>
           {t("emptyState")}

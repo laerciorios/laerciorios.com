@@ -29,7 +29,9 @@
 
 @media (min-width: 640px) {
   .carouselWrapper {
-    width: 260px;
+    /* 11rem height at 16:9 → width = 11rem * (16/9) ≈ 19.556rem */
+    height: 11rem;
+    width: calc(11rem * 16 / 9);
     aspect-ratio: 16 / 9;
   }
 }
@@ -184,4 +186,8 @@
 .linkBtn svg {
   width: 1rem;
   height: 1rem;
+}
+
+.linkBtn svg path {
+  stroke: var(--text-primary);
 }

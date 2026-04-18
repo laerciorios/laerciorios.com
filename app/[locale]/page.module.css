@@ -1,0 +1,14 @@
+.homePage {
+  /* Remove the pageContent max-width/padding so Hero can go full-viewport */
+  margin-inline: calc(-1 * var(--page-padding-x));
+  width: calc(100% + 2 * var(--page-padding-x));
+}
+
+.sections {
+  max-width: calc(var(--content-max-width) + 2 * var(--page-padding-x));
+  margin: 0 auto;
+  padding: 4rem var(--page-padding-x);
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}

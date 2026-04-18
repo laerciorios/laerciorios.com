@@ -53,6 +53,7 @@
 
 .title {
   color: var(--text-primary) !important;
+  text-align: left !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -60,6 +61,7 @@
 
 .description {
   color: var(--text-secondary) !important;
+  text-align: left !important;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;

@@ -1,0 +1,62 @@
+.hero {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  height: calc(100svh - 3.5rem - 2rem);
+  min-height: calc(100vh - 3.5rem - 2rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 12.375rem;
+  height: 16.5rem;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.name {
+  color: var(--text-primary) !important;
+  text-align: center !important;
+}
+
+.jobTitle {
+  color: var(--text-secondary) !important;
+  text-align: center !important;
+}
+
+.chevron {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.chevron svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.chevron svg path {
+  stroke: var(--text-muted);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(0.5rem); }
+}

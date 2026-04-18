@@ -14,7 +14,7 @@ export default async function Projects({ params }: ProjectsPageProps) {
 
   return (
     <div className={styles.page}>
-      <Typography variant="h1">{t("title")}</Typography>
+      <Typography variant="h1" className={styles.pageTitle}>{t("title")}</Typography>
       <div className={styles.list}>
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} locale={locale} />

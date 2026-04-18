@@ -19,7 +19,9 @@
   },
   "home": {
     "heroTitle": "Hi, I'm Laercio Rios",
-    "heroSubtitle": "Software developer building products with care."
+    "heroSubtitle": "Software developer building products with care.",
+    "name": "LAERCIO RIOS",
+    "jobTitle": "Software Engineer"
   },
   "about": {},
   "projects": {

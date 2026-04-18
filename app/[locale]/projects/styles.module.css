@@ -4,6 +4,10 @@
   gap: 1.5rem;
 }
 
+.pageTitle {
+  text-align: left !important;
+}
+
 .list {
   display: flex;
   flex-direction: column;

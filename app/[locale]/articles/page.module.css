@@ -1,3 +1,7 @@
+.pageTitle {
+  text-align: left !important;
+}
+
 .grid {
   display: flex;
   flex-direction: column;
