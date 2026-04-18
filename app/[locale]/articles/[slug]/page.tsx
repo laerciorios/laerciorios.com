@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ArticlePage({ params }: Props) {
   const { slug, locale } = await params;
-  const t = await getTranslations("articles");
+  const t = await getTranslations({ locale, namespace: "articles" });
   const article = getArticleBySlug(slug);
 
   if (!article) notFound();

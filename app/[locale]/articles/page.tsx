@@ -10,7 +10,7 @@ interface Props {
 
 export default async function Articles({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations("articles");
+  const t = await getTranslations({ locale, namespace: "articles" });
   const articles = getAllArticles();
 
   return (
