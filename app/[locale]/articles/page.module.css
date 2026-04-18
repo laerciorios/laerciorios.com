@@ -1,15 +1,46 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Page header: title + description */
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
 .pageTitle {
-  text-align: left !important;
+  text-align: left;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+/* Articles section */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin: 0;
 }
 
 .grid {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  margin-top: 2rem;
+  gap: 1rem;
 }
 
 .empty {
-  margin-top: 2rem;
   color: var(--text-muted);
 }

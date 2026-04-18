@@ -5,9 +5,9 @@
   align-items: center;
   border-radius: 0.25rem;
   border: 1px solid var(--border-subtle);
-  background: var(--color-surface);
+  background: var(--color-bg);
 }
 
 .label {
-  color: var(--brand) !important;
+  color: var(--brand);
 }

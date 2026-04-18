@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getFormatter } from "next-intl/server";
 import type { Metadata } from "next";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -25,19 +25,39 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const article = getArticleBySlug(slug);
 
   if (!article) return {};
 
   const canonical =
     article.canonical_url ||
-    `https://laerciorios.com/articles/${article.slug}`;
+    `https://laerciorios.com/${locale}/articles/${article.slug}`;
 
   return {
     title: article.title,
     description: article.description,
-    alternates: { canonical },
+    authors: [{ name: "Laercio Rios" }],
+    alternates: {
+      canonical,
+      languages: {
+        en: `https://laerciorios.com/en/articles/${slug}`,
+        "pt-BR": `https://laerciorios.com/pt-BR/articles/${slug}`,
+      },
+    },
+    openGraph: {
+      type: "article",
+      url: canonical,
+      title: article.title,
+      description: article.description,
+      publishedTime: article.date,
+      authors: ["Laercio Rios"],
+    },
+    twitter: {
+      card: "summary",
+      title: article.title,
+      description: article.description,
+    },
   };
 }
 
@@ -48,11 +68,8 @@ export default async function ArticlePage({ params }: Props) {
 
   if (!article) notFound();
 
-  const formattedDate = new Date(article.date).toLocaleDateString(locale, {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+  const format = await getFormatter();
+  const formattedDate = format.dateTime(new Date(article.date), "long");
 
   return (
     <article className={styles.article}>

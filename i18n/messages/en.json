@@ -80,9 +80,84 @@
       "description": { "label": "Data management platform for pharmacies." }
     }
   },
+  "experiences": {
+    "seeMore": "See More",
+    "seeLess": "See Less",
+    "current": "Current",
+    "aboutLabel": "About",
+    "responsibilitiesLabel": "Main responsibilities",
+    "stackLabel": "Technology Stack",
+    "geodatin": {
+      "position": {
+        "label": "Fullstack Developer"
+      },
+      "location": {
+        "label": "Remote (Feira de Santana, Brazil)"
+      },
+      "description": {
+        "label": "Specializes in data intelligence and geoinformation systems. My work spans API development, responsive web interfaces, and CI/CD automation."
+      },
+      "about": {
+        "label": "The company specializes in developing systems that integrate data intelligence and geoinformation to offer innovative solutions."
+      },
+      "responsibilities": {
+        "label": "Creating and maintaining Restful APIs with automated integration testing, using Node.js and TypeScript.\n- Developing responsive interfaces in web applications, using React.\n- Managing and optimizing relational databases with PostgreSQL, performing modeling and query enhancement.\n- Developing internal scripts and libraries focused on web scraping process automation.\n- Configuring and automating CI/CD pipelines with GitHub Actions.\n- Participating in client meetings to understand needs and ensure solutions meet expectations."
+      }
+    },
+    "golfarma": {
+      "position": {
+        "label": "Backend Developer (Intern)"
+      },
+      "location": {
+        "label": "Hybrid (Feira de Santana, Brazil)"
+      },
+      "description": {
+        "label": "Worked on development and maintenance of Restful APIs using PHP (Laravel) for a pharmaceutical distributor investing in technology."
+      },
+      "about": {
+        "label": "The pharmaceutical distributor, focused on the Bahian market, began investing in technology at the end of 2019 to keep up with the transformations in the sector."
+      },
+      "responsibilities": {
+        "label": "Development, creation, and maintenance of Restful APIs using PHP (Laravel), ensuring efficiency and scalability.\n- Managing and maintaining databases with SQL Server and PostgreSQL, ensuring data integrity and performance.\n- Direct contact with clients to understand needs, solve problems, and ensure proper system implementation."
+      }
+    }
+  },
+  "formations": {
+    "types": {
+      "bachelor": { "label": "Bachelor" },
+      "technician": { "label": "Technician" }
+    },
+    "status": {
+      "completed": { "label": "Completed" },
+      "ongoing": { "label": "Ongoing" },
+      "locked": { "label": "Locked" }
+    },
+    "cc": {
+      "label": "Computer Science",
+      "description": { "label": "A brief description of the institution, the course, and what I did/participated in." }
+    },
+    "ecomp": {
+      "label": "Computer Engineering",
+      "description": { "label": "A brief description of the institution, the course, and what I did/participated in." }
+    },
+    "systemDevelopment": {
+      "label": "System Development",
+      "description": { "label": "A brief description of the institution, the course, and what I did/participated in." }
+    }
+  },
+  "presentations": {
+    "masterChefEcomp": {
+      "title": { "label": "MasterChef ECOMP: The Recipe for Writing Good Code" },
+      "event": { "label": "XXX SIECOMP" },
+      "localization": { "label": "Feira de Santana, Brazil" },
+      "description": { "label": "The talk addressed the importance of learning the programming basics and making a correlation with cooking. The idea was to show that, just as in cooking, it is necessary to understand the ingredients and their functions to create an elaborate cake, in programming it is necessary to understand the concepts and their applications to create efficient and quality code." }
+    }
+  },
   "articles": {
     "title": "MY ARTICLES",
     "pageTitle": "Articles",
+    "pageSubtitle": "In 2025 I decided to start writing articles to share my experiences, mainly about my work, studies, and hobbies. Currently, all my articles are only available in Portuguese.",
+    "allArticles": "All Articles",
     "emptyState": "No articles yet. Check back soon.",
     "publishedOn": "Published on",
     "backToArticles": "Back to articles"

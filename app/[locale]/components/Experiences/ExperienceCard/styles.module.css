@@ -1,0 +1,210 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: stretch;
+}
+
+/* Timeline column */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.dot {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.icon path,
+.icon rect,
+.icon circle,
+.icon polygon,
+.icon ellipse {
+  fill: var(--color-bg);
+}
+
+.line {
+  width: 0.125rem;
+  flex: 1;
+  margin-top: 0.25rem;
+  background: var(--text-muted);
+}
+
+/* Detail card */
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--color-surface);
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  min-width: 0;
+  text-align: left;
+}
+
+/* Header group */
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.role {
+  margin: 0;
+  text-align: left;
+}
+
+.dateRange {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.subheaderRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.company {
+  color: var(--brand);
+  text-align: left;
+}
+
+.location {
+  color: var(--text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.description {
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+/* Toggle button */
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.toggleLabel {
+  color: var(--brand);
+}
+
+.chevron {
+  width: 0.875rem;
+  height: 0.875rem;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+.chevron path {
+  stroke: var(--brand);
+}
+
+/* Expanded content */
+
+.expandedContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  color: var(--text-primary-strong);
+  text-align: left;
+}
+
+.sectionText {
+  color: var(--text-secondary-strong);
+  text-align: left;
+}
+
+/* Responsibilities */
+
+.responsibilitiesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.bulletItem {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.bullet {
+  flex-shrink: 0;
+  color: var(--text-secondary-strong);
+  line-height: 1.2;
+  font-size: 1rem;
+  margin-top: 0.05em;
+}
+
+/* Technology Stack */
+
+.stackGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem 0.5rem;
+  padding: 0 0.25rem;
+}
+
+.stackCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stackCategoryLabel {
+  color: var(--text-secondary-strong);
+  text-align: left;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}

@@ -76,7 +76,7 @@
 }
 
 .textLeft {
-  text-align: left !important;
+  text-align: left;
 }
 
 /* Content area */
@@ -141,7 +141,7 @@
 }
 
 .badgeBg {
-  background: var(--color-bg) !important;
+  background: var(--color-bg);
 }
 
 /* Skills */

@@ -20,9 +20,33 @@ const spaceMono = Space_Mono({
   weight: ["400", "700"],
 });
 
+const BASE_URL = "https://laerciorios.com";
+
 export const metadata: Metadata = {
-  title: "Laercio Rios",
-  description: "Portfolio website of Laercio Rios",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "Laercio Rios",
+    template: "%s | Laercio Rios",
+  },
+  description:
+    "Laercio Rios — Fullstack software developer building products with care. Portfolio, projects, articles and more.",
+  authors: [{ name: "Laercio Rios", url: BASE_URL }],
+  creator: "Laercio Rios",
+  openGraph: {
+    type: "website",
+    siteName: "Laercio Rios",
+    locale: "en_US",
+    alternateLocale: "pt_BR",
+  },
+  twitter: {
+    card: "summary",
+    creator: "@laerciorios",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
 };
 
 export default async function LocaleLayout({

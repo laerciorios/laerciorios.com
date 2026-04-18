@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import Typography from "@/app/components/Typography";
 import { projects } from "@/data/projects";
@@ -6,6 +7,26 @@ import styles from "./styles.module.css";
 
 interface ProjectsPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: ProjectsPageProps): Promise<Metadata> {
+  const { locale } = await params;
+
+  return {
+    title: "Projects",
+    description: "Full portfolio of projects by Laercio Rios — personal, professional and academic work.",
+    alternates: {
+      canonical: `https://laerciorios.com/${locale}/projects`,
+      languages: {
+        en: "https://laerciorios.com/en/projects",
+        "pt-BR": "https://laerciorios.com/pt-BR/projects",
+      },
+    },
+    openGraph: {
+      url: `https://laerciorios.com/${locale}/projects`,
+      title: "Projects — Laercio Rios",
+    },
+  };
 }
 
 export default async function Projects({ params }: ProjectsPageProps) {

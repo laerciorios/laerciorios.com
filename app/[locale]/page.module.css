@@ -10,5 +10,14 @@
   padding: 4rem var(--page-padding-x);
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+}
+
+.sectionWithTitle {
+  gap: 1rem;
 }

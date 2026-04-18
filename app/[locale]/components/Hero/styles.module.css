@@ -26,13 +26,13 @@
 }
 
 .name {
-  color: var(--text-primary) !important;
-  text-align: center !important;
+  color: var(--text-primary);
+  text-align: center;
 }
 
 .jobTitle {
-  color: var(--text-secondary) !important;
-  text-align: center !important;
+  color: var(--text-secondary);
+  text-align: center;
 }
 
 .chevron {

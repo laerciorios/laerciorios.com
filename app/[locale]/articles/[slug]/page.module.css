@@ -32,7 +32,7 @@
 }
 
 .date {
-  color: var(--text-muted-strong) !important;
+  color: var(--text-muted-strong);
 }
 
 .dot {
@@ -43,12 +43,12 @@
 
 .title {
   text-align: left;
-  color: var(--text-primary) !important;
+  color: var(--text-primary);
 }
 
 .description {
   text-align: left;
-  color: var(--text-secondary) !important;
+  color: var(--text-secondary);
 }
 
 .body {
@@ -61,7 +61,7 @@
 .paragraph {
   text-align: left;
   line-height: 1.75;
-  color: var(--text-secondary-strong) !important;
+  color: var(--text-secondary-strong);
 }
 
 .body h1,

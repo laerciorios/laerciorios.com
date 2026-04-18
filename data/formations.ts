@@ -4,7 +4,7 @@ interface Formation {
   institution: string;
   startYear: string;
   endYear?: string;
-  isLocked?: boolean;
+  status: "completed" | "ongoing" | "locked";
 }
 
 export const formations: Formation[] = [
@@ -14,6 +14,7 @@ export const formations: Formation[] = [
     institution: "Universidade Salvador (UNIFACS)",
     startYear: "2024",
     endYear: "2025",
+    status: "completed",
   },
   {
     title: "ecomp",
@@ -21,7 +22,7 @@ export const formations: Formation[] = [
     institution: "Universidade Estadual de Feira de Santana (UEFS)",
     startYear: "2017",
     endYear: "2024",
-    isLocked: true,
+    status: "locked",
   },
   {
     title: "systemDevelopment",
@@ -29,5 +30,6 @@ export const formations: Formation[] = [
     institution: "SENAI - BA",
     startYear: "2018",
     endYear: "2019",
+    status: "completed",
   },
 ];

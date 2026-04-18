@@ -1,4 +1,4 @@
 .header {
-  text-align: left !important;
-  color: var(--text-primary) !important;
+  text-align: left;
+  color: var(--text-primary);
 }
