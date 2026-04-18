@@ -7,6 +7,7 @@ import { hasLocale } from "next-intl";
 import { locales } from "@/i18n/config";
 import "../globals.css";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import { ThemeProvider } from "next-themes";
 
 const spaceMono = Space_Mono({
@@ -44,7 +45,8 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="data-theme">
             <Header />
-            {children}
+            <div className="pageContent">{children}</div>
+            <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

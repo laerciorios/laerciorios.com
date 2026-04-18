@@ -22,6 +22,19 @@
     "heroSubtitle": "Desenvolvedor de software construindo produtos com cuidado."
   },
   "about": {},
-  "projects": {},
-  "articles": {}
+  "projects": {
+    "title": "FULL PORTFOLIO"
+  },
+  "articles": {
+    "title": "MY ARTICLES"
+  },
+  "footer": {
+    "description": "Desenvolvedor full-stack e designer criando experiências web bonitas e funcionais.",
+    "connections": "Conexões",
+    "navigation": "Navegação",
+    "email": "email",
+    "linkedin": "linkedin",
+    "github": "github",
+    "authorName": "Laercio Rios"
+  }
 }

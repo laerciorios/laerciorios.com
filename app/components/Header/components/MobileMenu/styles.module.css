@@ -2,19 +2,17 @@
   position: relative;
 }
 
-/* Icon wrapper — rotates 90deg when open for a smooth Menu → X swap */
 .iconWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease-in-out, opacity 0.15s ease-in-out;
+  transition: transform var(--transition-timing), opacity var(--transition-timing-fast);
 }
 
 .iconOpen {
   transform: rotate(90deg);
 }
 
-/* Dropdown enter */
 @keyframes dropdownIn {
   from {
     opacity: 0;
@@ -26,7 +24,6 @@
   }
 }
 
-/* Dropdown exit */
 @keyframes dropdownOut {
   from {
     opacity: 1;
@@ -38,7 +35,6 @@
   }
 }
 
-/* Nav item enter — staggered via inline animationDelay */
 @keyframes itemIn {
   from {
     opacity: 0;
@@ -55,26 +51,26 @@
   top: calc(100% + 0.5rem);
   right: 0;
   background: var(--color-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 0.5rem;
+  border: var(--border);
+  border-radius: var(--radius-lg);
   padding: 0.375rem;
   display: flex;
   flex-direction: column;
   min-width: 10rem;
-  z-index: 100;
-  animation: dropdownIn 0.15s ease-out forwards;
+  z-index: var(--z-overlay);
+  animation: dropdownIn var(--duration-fast) ease-out forwards;
 }
 
 .dropdownClosing {
-  animation: dropdownOut 0.15s ease-in forwards;
+  animation: dropdownOut var(--duration-fast) ease-in forwards;
 }
 
 .navItem {
   padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;
+  border-radius: var(--radius-md);
   text-transform: uppercase;
   transition: var(--transition-fast);
-  animation: itemIn 0.2s ease-out both;
+  animation: itemIn var(--duration-default) ease-out both;
 }
 
 .navItem:hover {
