@@ -1,12 +1,16 @@
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 import Typography from "@/app/components/Typography";
 import { getAllArticles } from "@/lib/articles";
 import ArticleCard from "./components/ArticleCard";
 import styles from "./page.module.css";
 
-export default async function Articles() {
+interface Props {
+  params: Promise<{ locale: string }>;
+}
+
+export default async function Articles({ params }: Props) {
+  const { locale } = await params;
   const t = await getTranslations("articles");
-  const locale = await getLocale();
   const articles = getAllArticles();
 
   return (
