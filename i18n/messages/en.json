@@ -26,7 +26,7 @@
     "seeAllProjects": "See all projects",
     "experiencesTitle": "Experiences",
     "formationsTitle": "Formations",
-    "presentationsTitle": "Presentations"
+    "talksTitle": "Talks"
   },
   "about": {},
   "projects": {
@@ -213,23 +213,23 @@
     "cc": {
       "label": "Computer Science",
       "description": {
-        "label": "A brief description of the institution, the course, and what I did/participated in."
+        "label": "Undergraduate course in Computer Science, conducted in a synchronous online format. During the program, I consolidated my knowledge and deepened studies in data structures and artificial intelligence, while also acquiring new learnings in areas such as computer graphics and Big Data."
       }
     },
     "ecomp": {
       "label": "Computer Engineering",
       "description": {
-        "label": "A brief description of the institution, the course, and what I did/participated in."
+        "label": "Undergraduate course in Computer Engineering, focused on problem-solving and project development using the PBL (Problem-Based Learning) methodology. During the program, I acquired a solid foundation in software and hardware, understanding their integration, and deepened my knowledge in computer networks, compilers, software architecture, and machine learning. Additionally, I participated in extracurricular projects, such as being a member of the course's athletics team and a research scholarship recipient from CAPES."
       }
     },
     "systemDevelopment": {
       "label": "System Development",
       "description": {
-        "label": "A brief description of the institution, the course, and what I did/participated in."
+        "label": "Technical course in System Development, conducted in a face-to-face format. During the program, I acquired knowledge in programming, system analysis and design. Additionally, I was a student monitor, assisting my peers in programming logic and other subjects, reinforcing the learning of the class and developing mentoring skills, as well as helping the teachers directly with the organization of the class."
       }
     }
   },
-  "presentations": {
+  "talks": {
     "masterChefEcomp": {
       "title": {
         "label": "MasterChef ECOMP: The Recipe for Writing Good Code"

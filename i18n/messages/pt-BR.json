@@ -26,7 +26,7 @@
     "seeAllProjects": "Ver todos os projetos",
     "experiencesTitle": "Experiências",
     "formationsTitle": "Formações",
-    "presentationsTitle": "Apresentações"
+    "talksTitle": "Talks"
   },
   "about": {},
   "projects": {
@@ -213,23 +213,23 @@
     "cc": {
       "label": "Ciência da Computação",
       "description": {
-        "label": "Uma breve descrição da instituição, do curso e do que fiz/participei."
+        "label": "Curso de graduação em Ciência da Computação, realizado em formato digital síncrono. Durante a formação, consolidei meus conhecimentos e aprofundei estudos em estruturas de dados e inteligência artificial, além de adquirir novos aprendizados em áreas como computação gráfica e Big Data."
       }
     },
     "ecomp": {
       "label": "Engenharia de Computação",
       "description": {
-        "label": "Uma breve descrição da instituição, do curso e do que fiz/participei."
+        "label": "Curso de graduação com foco em resolução de problemas e desenvolvimento de projetos, utilizando a metodologia PBL (Problem-Based Learning). Durante a formação, adquiri uma base sólida em software e hardware, compreendendo a integração entre ambos, além de aprofundar conhecimentos em redes de computadores, compiladores, arquitetura de software e aprendizado de máquina. Além disso, participei de projetos extra-curriculares, como membro da atlética do curso e sendo bolsista de iniciação científica pela CAPES."
       }
     },
     "systemDevelopment": {
       "label": "Desenvolvimento de Sistemas",
       "description": {
-        "label": "Uma breve descrição da instituição, do curso e do que fiz/participei."
+        "label": "Curso técnico em Desenvolvimento de Sistemas, realizado em formato presencial. Durante a formação, adquiri conhecimentos em programação, análise e projeto de sistemas. Além disso, fui aluno monitor, auxiliando os colegas em lógica de programação e outros assuntos, reforçando o aprendizado da turma e desenvolvendo habilidades de mentoria, além de ajudar diretamente os professores com a organização da turma."
       }
     }
   },
-  "presentations": {
+  "talks": {
     "masterChefEcomp": {
       "title": {
         "label": "MasterChef ECOMP: A Receita para Fazer um Bom Código"

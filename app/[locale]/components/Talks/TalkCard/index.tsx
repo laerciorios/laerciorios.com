@@ -6,7 +6,7 @@ import { Play, X } from "@/app/components/icons";
 import Typography from "@/app/components/Typography";
 import styles from "./styles.module.css";
 
-interface PresentationCardProps {
+interface TalkCardProps {
   link: string;
   date: string;
   title: string;
@@ -21,14 +21,14 @@ function extractYouTubeId(embedUrl: string): string {
   return embedUrl.split("/embed/")[1]?.split("?")[0] ?? "";
 }
 
-export default function PresentationCard({
+export default function TalkCard({
   link,
   date,
   title,
   event,
   localization,
   description,
-}: PresentationCardProps) {
+}: TalkCardProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);

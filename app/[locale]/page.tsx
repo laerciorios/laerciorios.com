@@ -6,7 +6,7 @@ import About from "./components/About";
 import Formations from "./components/Formations";
 import Experiences from "./components/Experiences";
 import FeaturedProjects from "./components/FeaturedProjects";
-import Presentations from "./components/Presentations";
+import Talks from "./components/Talks";
 import SectionHeader from "@/app/components/SectionHeader";
 import styles from "./page.module.css";
 
@@ -62,8 +62,8 @@ export default async function Home({ params }: HomePageProps) {
         </section>
 
         <section className={`${styles.section} ${styles.sectionWithTitle}`}>
-          <SectionHeader title={t("presentationsTitle")} />
-          <Presentations locale={locale} />
+          <SectionHeader title={t("talksTitle")} />
+          <Talks locale={locale} />
         </section>
       </div>
     </div>

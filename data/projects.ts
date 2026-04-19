@@ -88,6 +88,7 @@ export const projects: Project[] = [
     title: "portfolioV2",
     link: "https://v2.laerciorios.com/",
     repository: "https://github.com/laerciorios/laerciorios.com/tree/v2",
+    design: "https://www.figma.com/community/file/1395073669305590083",
     year: "2024",
     skills: ["Next.Js", "TypeScript", "Figma"],
     type: "personal",

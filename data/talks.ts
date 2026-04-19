@@ -1,10 +1,10 @@
-interface Presentation {
+interface Talk {
   title: string;
   link: string;
   date: Date;
 }
 
-export const presentations: Presentation[] = [
+export const talks: Talk[] = [
   {
     title: "masterChefEcomp",
     link: "https://www.youtube.com/embed/cK7dz0PXVq8?si=g3fMHDqd73KFvOl7",
