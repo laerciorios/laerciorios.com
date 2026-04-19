@@ -32,57 +32,119 @@
   "projects": {
     "title": "PORTFÓLIO COMPLETO",
     "types": {
-      "personal": { "label": "Pessoal" },
-      "professional": { "label": "Profissional" },
-      "academic": { "label": "Acadêmico" }
+      "personal": {
+        "label": "Pessoal"
+      },
+      "professional": {
+        "label": "Profissional"
+      },
+      "academic": {
+        "label": "Acadêmico"
+      }
     },
     "portfolioV3": {
-      "title": { "label": "Site Pessoal v3" },
-      "description": { "label": "Terceira versão do meu site pessoal." }
+      "title": {
+        "label": "Site Pessoal v3"
+      },
+      "description": {
+        "label": "Terceira versão do meu site pessoal. O projeto foi desenvolvido com o intuito de atualizar minhas habilidades e experiências, além de servir como um portfólio para meus projetos. Também aproveitei para aplicar meus conhecimentos de design e usabilidade, focando em uma experiência mais fluida e agradável para os visitantes."
+      }
+    },
+    "pokeBoxManager": {
+      "title": {
+        "label": "PokeBox Manager"
+      },
+      "description": {
+        "label": "Plataforma para gerenciamento e organização de caixas para o Pokémon Home. O projeto serviu como laboratório para práticas de desenvolvimento assistido por IA, usando padrões como o spec-driven-development com o framework OpenSpec."
+      }
     },
     "theLegacyOfManoel": {
-      "title": { "label": "O Legado de Manoel" },
-      "description": { "label": "Um jogo narrativo curto. O jogo conta a história sobre os primeiros moradores da cidade de Pintadas no Brasil com trechos de minigames entre as cenas. Neste projeto eu trabalhei sozinho, como game designer e programador, além de criar as artes." }
+      "title": {
+        "label": "O Legado de Manoel"
+      },
+      "description": {
+        "label": "Um jogo narrativo curto. O jogo conta a história sobre os primeiros moradores da cidade de Pintadas no Brasil com trechos de minigames entre as cenas. Neste projeto eu trabalhei sozinho, como game designer e programador, além de criar as artes."
+      }
     },
     "ecope": {
-      "title": { "label": "Plataforma Ecológico-Econômica de Pernambuco" },
-      "description": { "label": "Plataforma premiada pelo MapBiomas, o projeto integra dados e informações geoespaciais do meio ambiente pernambucano, qualificando os processos de gestão ambiental estadual, com ênfase no monitoramento, licenciamento e fiscalização Ambiental. Neste projeto trabalhei atuando no front-end construindo e mantendo páginas e componentes, além de realizar a integração com a API." }
+      "title": {
+        "label": "Plataforma Ecológico-Econômica de Pernambuco"
+      },
+      "description": {
+        "label": "Plataforma premiada pelo MapBiomas, o projeto integra dados e informações geoespaciais do meio ambiente pernambucano, qualificando os processos de gestão ambiental estadual, com ênfase no monitoramento, licenciamento e fiscalização Ambiental. Neste projeto trabalhei atuando no front-end construindo e mantendo páginas e componentes, além de realizar a integração com a API."
+      }
     },
     "urlShortener": {
-      "title": { "label": "API para Encurtador de URL" },
-      "description": { "label": "Uma API simples para encurtamento de URLs. O projeto foi desenvolvido com o intuito de praticar o desenvolvimento de APIs Restful, utilizando Node.js e TypeScript. A API permite o encurtamento de URLs, armazenamento em banco de dados e redirecionamento para a URL original." }
+      "title": {
+        "label": "API para Encurtador de URL"
+      },
+      "description": {
+        "label": "Uma API simples para encurtamento de URLs. O projeto foi desenvolvido com o intuito de praticar o desenvolvimento de APIs Restful, utilizando Node.js e TypeScript. A API permite o encurtamento de URLs, armazenamento em banco de dados e redirecionamento para a URL original."
+      }
     },
     "libScrapper": {
-      "title": { "label": "Biblioteca de Web Scraping Interno" },
-      "description": { "label": "Biblioteca para automatizar processos de web scraping interno. Obtendo dados de forma eficiente e reutilizável para diversos projetos internos." }
+      "title": {
+        "label": "Biblioteca de Web Scraping Interno"
+      },
+      "description": {
+        "label": "Biblioteca para automatizar processos de web scraping interno. Obtendo dados de forma eficiente e reutilizável para diversos projetos internos."
+      }
     },
     "portfolioV2": {
-      "title": { "label": "Site Pessoal v2" },
-      "description": { "label": "Segunda versão do meu site pessoal. O site foi desenvolvido com o intuito de apresentar minhas habilidades e experiências, além de servir como um portfólio para meus projetos. Também aproveitei para aplicar meus conhecimentos de design." }
+      "title": {
+        "label": "Site Pessoal v2"
+      },
+      "description": {
+        "label": "Segunda versão do meu site pessoal. O site foi desenvolvido com o intuito de apresentar minhas habilidades e experiências, além de servir como um portfólio para meus projetos. Também aproveitei para aplicar meus conhecimentos de design."
+      }
     },
     "semesterUefs": {
-      "title": { "label": "Semestre UEFS" },
-      "description": { "label": "Plataforma com contagem dos dias para o fim do semestre letivo da Universidade Estadual de Feira de Santana, além de um calendário com atualizações automáticas para ajudar a comunidade acadêmica." }
+      "title": {
+        "label": "Semestre UEFS"
+      },
+      "description": {
+        "label": "Plataforma com contagem dos dias para o fim do semestre letivo da Universidade Estadual de Feira de Santana, além de um calendário com atualizações automáticas para ajudar a comunidade acadêmica."
+      }
     },
     "portfolioV1": {
-      "title": { "label": "Site Pessoal v1" },
-      "description": { "label": "Primeira versão do meu site pessoal. Atualmente ele está desatualizado." }
+      "title": {
+        "label": "Site Pessoal v1"
+      },
+      "description": {
+        "label": "Primeira versão do meu site pessoal. Atualmente ele está desatualizado."
+      }
     },
     "ondeAssistir": {
-      "title": { "label": "Onde Assistir" },
-      "description": { "label": "Plataforma que reúne informações sobre onde assistir partidas de futebol ao vivo, com base em serviços disponíveis no Brasil. Desenvolvimento como projeto acadêmico." }
+      "title": {
+        "label": "Onde Assistir"
+      },
+      "description": {
+        "label": "Plataforma que reúne informações sobre onde assistir partidas de futebol ao vivo, com base em serviços disponíveis no Brasil. Desenvolvimento como projeto acadêmico."
+      }
     },
     "ppbio": {
-      "title": { "label": "Programa Prioritário de Bioeconomia (PPBio)" },
-      "description": { "label": "Plataforma com listagem de projetos para capitação de recursos, focado na Amazônia Legal. Atuei desenvolvendo a API." }
+      "title": {
+        "label": "Programa Prioritário de Bioeconomia (PPBio)"
+      },
+      "description": {
+        "label": "Plataforma com listagem de projetos para capitação de recursos, focado na Amazônia Legal. Atuei desenvolvendo a API."
+      }
     },
     "rhisa": {
-      "title": { "label": "Rhisa" },
-      "description": { "label": "Plataforma focado na criação de uma rede de pesquisadores atuando na Amazônia Legal. Atuei no desenvolvimento da API e no scraping dos dados." }
+      "title": {
+        "label": "Rhisa"
+      },
+      "description": {
+        "label": "Plataforma focado na criação de uma rede de pesquisadores atuando na Amazônia Legal. Atuei no desenvolvimento da API e no scraping dos dados."
+      }
     },
     "leadbase": {
-      "title": { "label": "Leadbase" },
-      "description": { "label": "Plataforma de gestão de dados para farmácias." }
+      "title": {
+        "label": "Leadbase"
+      },
+      "description": {
+        "label": "Plataforma de gestão de dados para farmácias."
+      }
     }
   },
   "experiences": {
@@ -130,33 +192,57 @@
   },
   "formations": {
     "types": {
-      "bachelor": { "label": "Bacharelado" },
-      "technician": { "label": "Técnico" }
+      "bachelor": {
+        "label": "Bacharelado"
+      },
+      "technician": {
+        "label": "Técnico"
+      }
     },
     "status": {
-      "completed": { "label": "Concluído" },
-      "ongoing": { "label": "Em andamento" },
-      "locked": { "label": "Trancado" }
+      "completed": {
+        "label": "Concluído"
+      },
+      "ongoing": {
+        "label": "Em andamento"
+      },
+      "locked": {
+        "label": "Trancado"
+      }
     },
     "cc": {
       "label": "Ciência da Computação",
-      "description": { "label": "Uma breve descrição da instituição, do curso e do que fiz/participei." }
+      "description": {
+        "label": "Uma breve descrição da instituição, do curso e do que fiz/participei."
+      }
     },
     "ecomp": {
       "label": "Engenharia de Computação",
-      "description": { "label": "Uma breve descrição da instituição, do curso e do que fiz/participei." }
+      "description": {
+        "label": "Uma breve descrição da instituição, do curso e do que fiz/participei."
+      }
     },
     "systemDevelopment": {
       "label": "Desenvolvimento de Sistemas",
-      "description": { "label": "Uma breve descrição da instituição, do curso e do que fiz/participei." }
+      "description": {
+        "label": "Uma breve descrição da instituição, do curso e do que fiz/participei."
+      }
     }
   },
   "presentations": {
     "masterChefEcomp": {
-      "title": { "label": "MasterChef ECOMP: A Receita para Fazer um Bom Código" },
-      "event": { "label": "XXX SIECOMP" },
-      "localization": { "label": "Feira de Santana, Bahia" },
-      "description": { "label": "A palestra abordou a importância de aprender as bases programação, fazendo uma correlação com a culinária. A ideia foi mostrar que, assim como na culinária, é necessário entender os ingredientes e suas funções para criar um bolo elaborado, na programação é necessário entender os conceitos e suas aplicações para criar um código eficiente e de qualidade." }
+      "title": {
+        "label": "MasterChef ECOMP: A Receita para Fazer um Bom Código"
+      },
+      "event": {
+        "label": "XXX SIECOMP"
+      },
+      "localization": {
+        "label": "Feira de Santana, Bahia"
+      },
+      "description": {
+        "label": "A palestra abordou a importância de aprender as bases programação, fazendo uma correlação com a culinária. A ideia foi mostrar que, assim como na culinária, é necessário entender os ingredientes e suas funções para criar um bolo elaborado, na programação é necessário entender os conceitos e suas aplicações para criar um código eficiente e de qualidade."
+      }
     }
   },
   "articles": {
