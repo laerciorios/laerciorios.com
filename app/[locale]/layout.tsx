@@ -81,7 +81,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="data-theme">
             <Header />
-            <div className="pageContent">{children}</div>
+            <main className="pageContent">{children}</main>
             <Footer />
           </ThemeProvider>
         </NextIntlClientProvider>

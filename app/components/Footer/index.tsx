@@ -45,9 +45,9 @@ export default async function Footer() {
       <div className={styles.inner}>
         <div className={styles.content}>
           <div className={styles.leftSection}>
-            <Link className={styles.logo} href="/">
-              <LogoIcon />
-              <Typography variant="body1" as="span">
+            <Link className={styles.logo} href="/" aria-label="Laercio Rios — Home">
+              <LogoIcon aria-hidden />
+              <Typography variant="body1" as="span" aria-hidden>
                 Laercio Rios
               </Typography>
             </Link>

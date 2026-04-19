@@ -24,6 +24,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     alternates: {
       canonical: localizedUrl(locale),
       languages: {
+        "x-default": "https://laerciorios.com",
         en: "https://laerciorios.com",
         "pt-BR": "https://laerciorios.com/pt-BR",
       },

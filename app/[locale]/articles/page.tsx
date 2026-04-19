@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     alternates: {
       canonical: localizedUrl(locale, "/articles"),
       languages: {
+        "x-default": "https://laerciorios.com/articles",
         en: "https://laerciorios.com/articles",
         "pt-BR": "https://laerciorios.com/pt-BR/articles",
       },

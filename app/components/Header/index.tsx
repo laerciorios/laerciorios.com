@@ -20,9 +20,9 @@ export default async function Header() {
   return (
     <nav className={styles.header}>
       <div className={styles.leftSection}>
-        <Link className={styles.logo} href="/">
-          <LogoIcon />
-          <Typography className={styles.logoName} variant="body1" as="span">
+        <Link className={styles.logo} href="/" aria-label="Laercio Rios — Home">
+          <LogoIcon aria-hidden />
+          <Typography className={styles.logoName} variant="body1" as="span" aria-hidden>
             Laercio Rios
           </Typography>
         </Link>
