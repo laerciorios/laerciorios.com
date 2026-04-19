@@ -1,21 +1,20 @@
-import Link from "next/link";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import Typography from "../Typography";
 import LogoIcon from "../Header/components/LogoIcon";
 import { Mail, Linkedin, Github } from "../icons";
 import styles from "./styles.module.css";
 
 export default async function Footer() {
-  const [tFooter, tNav, locale] = await Promise.all([
+  const [tFooter, tNav] = await Promise.all([
     getTranslations("footer"),
     getTranslations("navigation"),
-    getLocale(),
   ]);
 
   const navItems = [
-    { text: tNav("home"), href: `/${locale}` },
-    { text: tNav("projects"), href: `/${locale}/projects` },
-    { text: tNav("articles"), href: `/${locale}/articles` },
+    { text: tNav("home"), href: "/" },
+    { text: tNav("projects"), href: "/projects" },
+    { text: tNav("articles"), href: "/articles" },
   ];
 
   const connections = [
@@ -46,7 +45,7 @@ export default async function Footer() {
       <div className={styles.inner}>
         <div className={styles.content}>
           <div className={styles.leftSection}>
-            <Link className={styles.logo} href={`/${locale}`}>
+            <Link className={styles.logo} href="/">
               <LogoIcon />
               <Typography variant="body1" as="span">
                 Laercio Rios
@@ -65,7 +64,7 @@ export default async function Footer() {
               </Typography>
               <div className={styles.connectionList}>
                 {connections.map((item) => (
-                  <Link
+                  <a
                     key={item.label}
                     href={item.href}
                     className={styles.connectionItem}
@@ -82,7 +81,7 @@ export default async function Footer() {
                         {item.value}
                       </Typography>
                     </div>
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>

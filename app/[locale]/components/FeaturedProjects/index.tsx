@@ -1,5 +1,5 @@
-import NextLink from "next/link";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "@/app/components/icons";
 import Typography from "@/app/components/Typography";
 import { projects } from "@/data/projects";
@@ -9,7 +9,6 @@ import styles from "./styles.module.css";
 export default async function FeaturedProjects() {
   const t = await getTranslations("projects");
   const tHome = await getTranslations("home");
-  const locale = await getLocale();
 
   const highlighted = projects.filter((p) => p.highlight);
 
@@ -19,12 +18,12 @@ export default async function FeaturedProjects() {
         <Typography variant="h2" as="h2" className={styles.title}>
           {tHome("featuredProjectsTitle")}
         </Typography>
-        <NextLink href={`/${locale}/projects`} className={styles.seeAll}>
+        <Link href="/projects" className={styles.seeAll}>
           <Typography variant="body1" as="span" className={styles.seeAllLabel}>
             {tHome("seeAllProjects")}
           </Typography>
           <ArrowRight className={styles.seeAllIcon} aria-hidden />
-        </NextLink>
+        </Link>
       </div>
 
       <div className={styles.grid}>

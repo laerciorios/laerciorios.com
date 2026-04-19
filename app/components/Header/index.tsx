@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { getTranslations, getLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import HeaderItem from "./components/HeaderItem";
 import styles from "./styles.module.css";
 import LogoIcon from "./components/LogoIcon";
@@ -9,21 +9,18 @@ import MobileMenu from "./components/MobileMenu";
 import Typography from "../Typography";
 
 export default async function Header() {
-  const [t, locale] = await Promise.all([
-    getTranslations("navigation"),
-    getLocale(),
-  ]);
+  const t = await getTranslations("navigation");
 
   const navItems = [
-    { text: t("home"), href: `/${locale}` },
-    { text: t("projects"), href: `/${locale}/projects` },
-    { text: t("articles"), href: `/${locale}/articles` },
+    { text: t("home"), href: "/" },
+    { text: t("projects"), href: "/projects" },
+    { text: t("articles"), href: "/articles" },
   ];
 
   return (
     <nav className={styles.header}>
       <div className={styles.leftSection}>
-        <Link className={styles.logo} href={`/${locale}`}>
+        <Link className={styles.logo} href="/">
           <LogoIcon />
           <Typography className={styles.logoName} variant="body1" as="span">
             Laercio Rios

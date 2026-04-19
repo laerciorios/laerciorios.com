@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { localizedUrl } from "@/i18n/utils";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Formations from "./components/Formations";
@@ -21,14 +22,14 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     title: { absolute: "Laercio Rios" },
     description: t("heroSubtitle"),
     alternates: {
-      canonical: `https://laerciorios.com/${locale}`,
+      canonical: localizedUrl(locale),
       languages: {
-        en: "https://laerciorios.com/en",
+        en: "https://laerciorios.com",
         "pt-BR": "https://laerciorios.com/pt-BR",
       },
     },
     openGraph: {
-      url: `https://laerciorios.com/${locale}`,
+      url: localizedUrl(locale),
       title: t("name"),
       description: t("heroSubtitle"),
     },

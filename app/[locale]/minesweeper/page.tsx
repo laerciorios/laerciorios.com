@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import Link from "next/link";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Flag, Mine, Skull, Smile, Trophy } from "@/app/components/icons";
 import styles from "./page.module.css";
 
@@ -116,7 +116,6 @@ function isWon(board: Cell[][], rows: number, cols: number, mines: number): bool
 // ── Component ──────────────────────────────────────────────────────────────
 
 export default function MinesweeperPage() {
-  const locale = useLocale();
   const t = useTranslations("minesweeper");
   const [diffIdx, setDiffIdx] = useState(0);
   const diff = DIFFICULTIES[diffIdx];
@@ -214,7 +213,7 @@ export default function MinesweeperPage() {
   return (
     <div className={styles.page}>
       <div className={styles.topBar}>
-        <Link href={`/${locale}`} className={styles.backLink}>
+        <Link href="/" className={styles.backLink}>
           {t("back")}
         </Link>
         <h1 className={styles.pageTitle}>{t("pageTitle")}</h1>

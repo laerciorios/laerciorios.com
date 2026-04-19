@@ -22,25 +22,33 @@ const spaceMono = Space_Mono({
 
 const BASE_URL = "https://laerciorios.com";
 
+const DESCRIPTION =
+  "Laercio Rios — Fullstack software developer building products with care. Portfolio, projects, articles and more.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default: "Laercio Rios",
     template: "%s | Laercio Rios",
   },
-  description:
-    "Laercio Rios — Fullstack software developer building products with care. Portfolio, projects, articles and more.",
+  description: DESCRIPTION,
   authors: [{ name: "Laercio Rios", url: BASE_URL }],
   creator: "Laercio Rios",
   openGraph: {
     type: "website",
+    url: BASE_URL,
     siteName: "Laercio Rios",
+    title: "Laercio Rios",
+    description: DESCRIPTION,
     locale: "en_US",
     alternateLocale: "pt_BR",
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
+    site: "@laerciorios",
     creator: "@laerciorios",
+    title: "Laercio Rios",
+    description: DESCRIPTION,
   },
   robots: {
     index: true,

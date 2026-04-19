@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { localizedUrl } from "@/i18n/utils";
 import Typography from "@/app/components/Typography";
 import { projects } from "@/data/projects";
 import ProjectCard from "./components/ProjectCard";
@@ -16,14 +17,14 @@ export async function generateMetadata({ params }: ProjectsPageProps): Promise<M
     title: "Projects",
     description: "Full portfolio of projects by Laercio Rios — personal, professional and academic work.",
     alternates: {
-      canonical: `https://laerciorios.com/${locale}/projects`,
+      canonical: localizedUrl(locale, "/projects"),
       languages: {
-        en: "https://laerciorios.com/en/projects",
+        en: "https://laerciorios.com/projects",
         "pt-BR": "https://laerciorios.com/pt-BR/projects",
       },
     },
     openGraph: {
-      url: `https://laerciorios.com/${locale}/projects`,
+      url: localizedUrl(locale, "/projects"),
       title: "Projects — Laercio Rios",
     },
   };

@@ -1,22 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { useLocale } from "next-intl";
-import { useRouter } from "next/navigation";
+import { useRouter } from "@/i18n/navigation";
 import { Mine } from "@/app/components/icons";
 import styles from "./MineButton.module.css";
 
 export function MineButton() {
   const [clicks, setClicks] = useState(0);
   const [animKey, setAnimKey] = useState(0);
-  const locale = useLocale();
   const router = useRouter();
 
   function handleClick() {
     const next = clicks + 1;
     setAnimKey((k) => k + 1);
     if (next >= 3) {
-      router.push(`/${locale}/minesweeper`);
+      router.push("/minesweeper");
       return;
     }
     setClicks(next);

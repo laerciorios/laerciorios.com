@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { localizedUrl } from "@/i18n/utils";
 import Typography from "@/app/components/Typography";
 import { getAllArticles } from "@/lib/articles";
 import ArticleCard from "./components/ArticleCard";
@@ -17,14 +18,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: t("pageTitle"),
     description: "Articles and writings by Laercio Rios on software development.",
     alternates: {
-      canonical: `https://laerciorios.com/${locale}/articles`,
+      canonical: localizedUrl(locale, "/articles"),
       languages: {
-        en: "https://laerciorios.com/en/articles",
+        en: "https://laerciorios.com/articles",
         "pt-BR": "https://laerciorios.com/pt-BR/articles",
       },
     },
     openGraph: {
-      url: `https://laerciorios.com/${locale}/articles`,
+      url: localizedUrl(locale, "/articles"),
       title: t("pageTitle"),
     },
   };
