@@ -1,0 +1,66 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.code {
+  font-size: clamp(5rem, 18vw, 9rem);
+  line-height: 100%;
+  color: var(--text-primary);
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.subtitle {
+  max-width: 42ch;
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.retry,
+.back {
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  padding: 0.5rem 1.25rem;
+  transition: var(--transition-default);
+}
+
+.retry {
+  cursor: pointer;
+  color: #fff;
+  background-color: var(--brand);
+  border: 2px solid var(--brand);
+}
+
+.retry:hover {
+  filter: brightness(1.05);
+}
+
+.back {
+  color: var(--brand);
+  text-decoration: none;
+  border: 2px solid var(--brand);
+}
+
+.back:hover {
+  background-color: var(--brand);
+  color: #fff;
+}

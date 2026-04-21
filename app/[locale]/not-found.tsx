@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { MineButton } from "./components/MineButton";
 import styles from "./not-found.module.css";
 

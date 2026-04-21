@@ -14,7 +14,9 @@ interface HomePageProps {
   params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: HomePageProps): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "home" });
 

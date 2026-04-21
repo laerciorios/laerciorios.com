@@ -259,6 +259,12 @@
     "subtitle": "Você pisou em uma mina. Esta página não existe.",
     "backHome": "Voltar para início"
   },
+  "error500": {
+    "title": "Algo deu errado",
+    "subtitle": "Um erro inesperado no servidor aconteceu ao carregar esta página.",
+    "tryAgain": "Tentar novamente",
+    "backHome": "Voltar para início"
+  },
   "minesweeper": {
     "pageTitle": "Campo Minado",
     "back": "← Voltar",

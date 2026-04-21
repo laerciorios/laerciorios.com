@@ -259,6 +259,12 @@
     "subtitle": "You stepped on a mine. This page doesn't exist.",
     "backHome": "Go back home"
   },
+  "error500": {
+    "title": "Something went wrong",
+    "subtitle": "An unexpected server error happened while loading this page.",
+    "tryAgain": "Try again",
+    "backHome": "Go back home"
+  },
   "minesweeper": {
     "pageTitle": "Minesweeper",
     "back": "← Back",
