@@ -22,7 +22,12 @@ export default async function Header() {
       <div className={styles.leftSection}>
         <Link className={styles.logo} href="/" aria-label="Laercio Rios — Home">
           <LogoIcon aria-hidden />
-          <Typography className={styles.logoName} variant="body1" as="span" aria-hidden>
+          <Typography
+            className={styles.logoName}
+            variant="body1"
+            as="span"
+            aria-hidden
+          >
             Laercio Rios
           </Typography>
         </Link>

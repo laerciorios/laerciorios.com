@@ -10,12 +10,15 @@ interface ProjectsPageProps {
   params: Promise<{ locale: string }>;
 }
 
-export async function generateMetadata({ params }: ProjectsPageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: ProjectsPageProps): Promise<Metadata> {
   const { locale } = await params;
 
   return {
     title: "Projects",
-    description: "Full portfolio of projects by Laercio Rios — personal, professional and academic work.",
+    description:
+      "Full portfolio of projects by Laercio Rios — personal, professional and academic work.",
     alternates: {
       canonical: localizedUrl(locale, "/projects"),
       languages: {
@@ -37,7 +40,9 @@ export default async function Projects({ params }: ProjectsPageProps) {
 
   return (
     <div className={styles.page}>
-      <Typography variant="h1" className={styles.pageTitle}>{t("title.label")}</Typography>
+      <Typography variant="h1" className={styles.pageTitle}>
+        {t("title.label")}
+      </Typography>
       <div className={styles.list}>
         {projects.map((project) => (
           <ProjectCard key={project.title} project={project} locale={locale} />

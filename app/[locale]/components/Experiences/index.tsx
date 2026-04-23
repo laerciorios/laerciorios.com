@@ -30,34 +30,34 @@ export default async function Experiences() {
         </a>
       </div>
       <div className={styles.list}>
-      {experiences.map((exp, index) => {
-        const startFormatted = format.dateTime(exp.startDate, "monthYear");
-        const endFormatted = exp.endDate
-          ? format.dateTime(exp.endDate, "monthYear")
-          : t("current.label");
-        const dateRange = `${startFormatted} - ${endFormatted}`;
+        {experiences.map((exp, index) => {
+          const startFormatted = format.dateTime(exp.startDate, "monthYear");
+          const endFormatted = exp.endDate
+            ? format.dateTime(exp.endDate, "monthYear")
+            : t("current.label");
+          const dateRange = `${startFormatted} - ${endFormatted}`;
 
-        return (
-          <ExperienceCard
-            key={exp.title}
-            companyKey={exp.title}
-            company={exp.company}
-            dateRange={dateRange}
-            position={t(`${exp.title}.position.label`)}
-            location={t(`${exp.title}.location.label`)}
-            description={t(`${exp.title}.description.label`)}
-            about={t(`${exp.title}.about.label`)}
-            responsibilities={t(`${exp.title}.responsibilities.label`)}
-            stack={exp.stack}
-            isLast={index === experiences.length - 1}
-            seeMoreLabel={t("seeMore.label")}
-            seeLessLabel={t("seeLess.label")}
-            aboutLabel={t("aboutLabel.label")}
-            responsibilitiesLabel={t("responsibilitiesLabel.label")}
-            stackLabel={t("stackLabel.label")}
-          />
-        );
-      })}
+          return (
+            <ExperienceCard
+              key={exp.title}
+              companyKey={exp.title}
+              company={exp.company}
+              dateRange={dateRange}
+              position={t(`${exp.title}.position.label`)}
+              location={t(`${exp.title}.location.label`)}
+              description={t(`${exp.title}.description.label`)}
+              about={t(`${exp.title}.about.label`)}
+              responsibilities={t(`${exp.title}.responsibilities.label`)}
+              stack={exp.stack}
+              isLast={index === experiences.length - 1}
+              seeMoreLabel={t("seeMore.label")}
+              seeLessLabel={t("seeLess.label")}
+              aboutLabel={t("aboutLabel.label")}
+              responsibilitiesLabel={t("responsibilitiesLabel.label")}
+              stackLabel={t("stackLabel.label")}
+            />
+          );
+        })}
       </div>
     </div>
   );

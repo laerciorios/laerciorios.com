@@ -45,7 +45,11 @@ export default async function Footer() {
       <div className={styles.inner}>
         <div className={styles.content}>
           <div className={styles.leftSection}>
-            <Link className={styles.logo} href="/" aria-label="Laercio Rios — Home">
+            <Link
+              className={styles.logo}
+              href="/"
+              aria-label="Laercio Rios — Home"
+            >
               <LogoIcon aria-hidden />
               <Typography variant="body1" as="span" aria-hidden>
                 Laercio Rios
@@ -111,7 +115,8 @@ export default async function Footer() {
         </div>
         <div className={styles.bottom}>
           <Typography variant="body3" className={styles.copyright}>
-            {year} <span aria-hidden="true">·</span> {tFooter("authorName.label")}
+            {year} <span aria-hidden="true">·</span>{" "}
+            {tFooter("authorName.label")}
           </Typography>
         </div>
       </div>

@@ -16,7 +16,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: t("pageTitle.label"),
-    description: "Articles and writings by Laercio Rios on software development.",
+    description:
+      "Articles and writings by Laercio Rios on software development.",
     alternates: {
       canonical: localizedUrl(locale, "/articles"),
       languages: {
@@ -59,7 +60,11 @@ export default async function Articles({ params }: Props) {
         ) : (
           <div className={styles.grid}>
             {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} locale={locale} />
+              <ArticleCard
+                key={article.slug}
+                article={article}
+                locale={locale}
+              />
             ))}
           </div>
         )}

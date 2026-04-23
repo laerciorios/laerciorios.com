@@ -83,7 +83,9 @@ export default async function ArticlePage({ params }: Props) {
           </Typography>
           {article.theme && (
             <>
-              <span className={styles.dot} aria-hidden="true">·</span>
+              <span className={styles.dot} aria-hidden="true">
+                ·
+              </span>
               <Badge label={article.theme} />
             </>
           )}
@@ -113,19 +115,20 @@ export default async function ArticlePage({ params }: Props) {
               <Typography variant="h4">{children}</Typography>
             ),
             p: ({ children }) => (
-              <Typography variant="body2" className={styles.paragraph}>{children}</Typography>
+              <Typography variant="body2" className={styles.paragraph}>
+                {children}
+              </Typography>
             ),
             code: ({ className, children }) => (
               <CodeBlock className={className}>{children}</CodeBlock>
             ),
-            blockquote: ({ children }) => (
-              <Blockquote>{children}</Blockquote>
-            ),
-            table: ({ children }) => (
-              <ArticleTable>{children}</ArticleTable>
-            ),
+            blockquote: ({ children }) => <Blockquote>{children}</Blockquote>,
+            table: ({ children }) => <ArticleTable>{children}</ArticleTable>,
             img: ({ src, alt }) => (
-              <ArticleImage src={typeof src === "string" ? src : undefined} alt={alt} />
+              <ArticleImage
+                src={typeof src === "string" ? src : undefined}
+                alt={alt}
+              />
             ),
             a: ({ href, children }) => (
               <a

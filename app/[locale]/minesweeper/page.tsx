@@ -37,7 +37,7 @@ function emptyBoard(rows: number, cols: number): Cell[][] {
       isFlagged: false,
       adjacentMines: 0,
       isTriggered: false,
-    }))
+    })),
   );
 }
 
@@ -46,7 +46,7 @@ function buildBoard(
   cols: number,
   mines: number,
   safeR: number,
-  safeC: number
+  safeC: number,
 ): Cell[][] {
   const board = emptyBoard(rows, cols);
 
@@ -68,7 +68,13 @@ function buildBoard(
         for (let dc = -1; dc <= 1; dc++) {
           const nr = r + dr;
           const nc = c + dc;
-          if (nr >= 0 && nr < rows && nc >= 0 && nc < cols && board[nr][nc].isMine)
+          if (
+            nr >= 0 &&
+            nr < rows &&
+            nc >= 0 &&
+            nc < cols &&
+            board[nr][nc].isMine
+          )
             count++;
         }
       }
@@ -84,7 +90,7 @@ function floodReveal(
   rows: number,
   cols: number,
   startR: number,
-  startC: number
+  startC: number,
 ): Cell[][] {
   const next = board.map((row) => row.map((cell) => ({ ...cell })));
   const stack = [[startR, startC]];
@@ -105,11 +111,15 @@ function floodReveal(
   return next;
 }
 
-function isWon(board: Cell[][], rows: number, cols: number, mines: number): boolean {
+function isWon(
+  board: Cell[][],
+  rows: number,
+  cols: number,
+  mines: number,
+): boolean {
   let revealed = 0;
   for (let r = 0; r < rows; r++)
-    for (let c = 0; c < cols; c++)
-      if (board[r][c].isRevealed) revealed++;
+    for (let c = 0; c < cols; c++) if (board[r][c].isRevealed) revealed++;
   return revealed === rows * cols - mines;
 }
 
@@ -120,19 +130,27 @@ export default function MinesweeperPage() {
   const [diffIdx, setDiffIdx] = useState(0);
   const diff = DIFFICULTIES[diffIdx];
 
-  const [board, setBoard] = useState<Cell[][]>(() => emptyBoard(diff.rows, diff.cols));
+  const [board, setBoard] = useState<Cell[][]>(() =>
+    emptyBoard(diff.rows, diff.cols),
+  );
   const [status, setStatus] = useState<GameStatus>("idle");
   const [flagCount, setFlagCount] = useState(0);
   const [time, setTime] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const stopTimer = useCallback(() => {
-    if (timerRef.current) { clearInterval(timerRef.current); timerRef.current = null; }
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = null;
+    }
   }, []);
 
   const startTimer = useCallback(() => {
     stopTimer();
-    timerRef.current = setInterval(() => setTime((t) => Math.min(t + 1, 999)), 1000);
+    timerRef.current = setInterval(
+      () => setTime((t) => Math.min(t + 1, 999)),
+      1000,
+    );
   }, [stopTimer]);
 
   useEffect(() => () => stopTimer(), [stopTimer]);
@@ -145,7 +163,7 @@ export default function MinesweeperPage() {
       setFlagCount(0);
       setTime(0);
     },
-    [diff, stopTimer]
+    [diff, stopTimer],
   );
 
   function pickDifficulty(idx: number) {
@@ -172,7 +190,7 @@ export default function MinesweeperPage() {
             ...cell,
             isRevealed: cell.isMine ? true : cell.isRevealed,
             isTriggered: ri === r && ci === c,
-          }))
+          })),
         );
         setBoard(lost);
         setStatus("lost");
@@ -191,7 +209,7 @@ export default function MinesweeperPage() {
         if (status === "idle") setStatus("playing");
       }
     },
-    [board, status, diff, startTimer, stopTimer]
+    [board, status, diff, startTimer, stopTimer],
   );
 
   const flag = useCallback(
@@ -205,7 +223,7 @@ export default function MinesweeperPage() {
       setBoard(next);
       setFlagCount((fc) => (next[r][c].isFlagged ? fc + 1 : fc - 1));
     },
-    [board, status]
+    [board, status],
   );
 
   const remaining = diff.mines - flagCount;
@@ -224,7 +242,11 @@ export default function MinesweeperPage() {
           <span className={styles.counter}>
             {String(Math.max(remaining, 0)).padStart(3, "0")}
           </span>
-          <button className={styles.resetBtn} onClick={() => reset()} aria-label={t("reset.label")}>
+          <button
+            className={styles.resetBtn}
+            onClick={() => reset()}
+            aria-label={t("reset.label")}
+          >
             {status === "won" ? (
               <Trophy width={20} height={20} />
             ) : status === "lost" ? (
@@ -233,12 +255,16 @@ export default function MinesweeperPage() {
               <Smile width={20} height={20} />
             )}
           </button>
-          <span className={styles.counter}>{String(time).padStart(3, "0")}</span>
+          <span className={styles.counter}>
+            {String(time).padStart(3, "0")}
+          </span>
         </div>
 
         <div
           className={styles.grid}
-          style={{ "--cols": diff.cols, "--rows": diff.rows } as React.CSSProperties}
+          style={
+            { "--cols": diff.cols, "--rows": diff.rows } as React.CSSProperties
+          }
         >
           {board.map((row, r) =>
             row.map((cell, c) => {
@@ -274,7 +300,7 @@ export default function MinesweeperPage() {
                   ) : null}
                 </button>
               );
-            })
+            }),
           )}
         </div>
 
@@ -291,7 +317,9 @@ export default function MinesweeperPage() {
         </div>
 
         {(status === "won" || status === "lost") && (
-          <p className={`${styles.statusMsg} ${status === "won" ? styles.statusWon : styles.statusLost}`}>
+          <p
+            className={`${styles.statusMsg} ${status === "won" ? styles.statusWon : styles.statusLost}`}
+          >
             {status === "won" ? t("won.label") : t("lost.label")}
           </p>
         )}
