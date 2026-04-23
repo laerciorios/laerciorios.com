@@ -11,7 +11,7 @@ export default function ThemeSwitchButton() {
   const currentTheme = theme === "dark" ? "dark" : "light";
   const icon = currentTheme === "light" ? <DarkIcon /> : <LightIcon />;
   const ariaLabel =
-    currentTheme === "light" ? t("switchToDark") : t("switchToLight");
+    currentTheme === "light" ? t("switchToDark.label") : t("switchToLight.label");
 
   function toggleTheme() {
     setTheme(currentTheme === "light" ? "dark" : "light");

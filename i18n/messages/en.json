@@ -1,36 +1,76 @@
 {
   "navigation": {
-    "home": "Home",
-    "about": "About",
-    "projects": "Projects",
-    "articles": "Articles"
+    "home": {
+      "label": "Home"
+    },
+    "about": {
+      "label": "About"
+    },
+    "projects": {
+      "label": "Projects"
+    },
+    "articles": {
+      "label": "Articles"
+    }
   },
   "language": {
-    "switch": "Switch language"
+    "switch": {
+      "label": "Switch language"
+    }
   },
   "theme": {
-    "switchToDark": "Switch to dark theme",
-    "switchToLight": "Switch to light theme"
+    "switchToDark": {
+      "label": "Switch to dark theme"
+    },
+    "switchToLight": {
+      "label": "Switch to light theme"
+    }
   },
   "common": {
-    "readMore": "Read more",
-    "viewProject": "View project",
-    "backToTop": "Back to top"
+    "readMore": {
+      "label": "Read more"
+    },
+    "viewProject": {
+      "label": "View project"
+    },
+    "backToTop": {
+      "label": "Back to top"
+    }
   },
   "home": {
-    "heroTitle": "Hi, I'm Laercio Rios",
-    "heroSubtitle": "Software developer building products with care.",
-    "name": "LAERCIO RIOS",
-    "jobTitle": "Software Engineer",
-    "featuredProjectsTitle": "Featured Projects",
-    "seeAllProjects": "See all projects",
-    "experiencesTitle": "Experiences",
-    "formationsTitle": "Formations",
-    "talksTitle": "Talks"
+    "heroTitle": {
+      "label": "Hi, I'm Laercio Rios"
+    },
+    "heroSubtitle": {
+      "label": "Software developer building products with care."
+    },
+    "name": {
+      "label": "LAERCIO RIOS"
+    },
+    "jobTitle": {
+      "label": "Software Engineer"
+    },
+    "featuredProjectsTitle": {
+      "label": "Featured Projects"
+    },
+    "seeAllProjects": {
+      "label": "See all projects"
+    },
+    "experiencesTitle": {
+      "label": "Experiences"
+    },
+    "formationsTitle": {
+      "label": "Formations"
+    },
+    "talksTitle": {
+      "label": "Talks"
+    }
   },
   "about": {},
   "projects": {
-    "title": "FULL PORTFOLIO",
+    "title": {
+      "label": "FULL PORTFOLIO"
+    },
     "types": {
       "personal": {
         "label": "Personal"
@@ -156,13 +196,27 @@
     }
   },
   "experiences": {
-    "seeMore": "See More",
-    "seeLess": "See Less",
-    "current": "Current",
-    "seeFullResume": "See my full resume",
-    "aboutLabel": "About",
-    "responsibilitiesLabel": "Main responsibilities",
-    "stackLabel": "Technology Stack",
+    "seeMore": {
+      "label": "See More"
+    },
+    "seeLess": {
+      "label": "See Less"
+    },
+    "current": {
+      "label": "Current"
+    },
+    "seeFullResume": {
+      "label": "See my full resume"
+    },
+    "aboutLabel": {
+      "label": "About"
+    },
+    "responsibilitiesLabel": {
+      "label": "Main responsibilities"
+    },
+    "stackLabel": {
+      "label": "Technology Stack"
+    },
     "geodatin": {
       "position": {
         "label": "Fullstack Developer"
@@ -254,44 +308,102 @@
     }
   },
   "articles": {
-    "title": "MY ARTICLES",
-    "pageTitle": "Articles",
-    "pageSubtitle": "In 2025 I decided to start writing articles to share my experiences, mainly about my work, studies, and hobbies. Currently, all my articles are only available in Portuguese.",
-    "allArticles": "All Articles",
-    "emptyState": "No articles yet. Check back soon.",
-    "publishedOn": "Published on",
-    "backToArticles": "Back to articles"
+    "title": {
+      "label": "MY ARTICLES"
+    },
+    "pageTitle": {
+      "label": "Articles"
+    },
+    "pageSubtitle": {
+      "label": "In 2025 I decided to start writing articles to share my experiences, mainly about my work, studies, and hobbies. Currently, all my articles are only available in Portuguese."
+    },
+    "allArticles": {
+      "label": "All Articles"
+    },
+    "emptyState": {
+      "label": "No articles yet. Check back soon."
+    },
+    "publishedOn": {
+      "label": "Published on"
+    },
+    "backToArticles": {
+      "label": "Back to articles"
+    }
   },
   "notFound": {
-    "title": "Page not found",
-    "subtitle": "You stepped on a mine. This page doesn't exist.",
-    "backHome": "Go back home"
+    "title": {
+      "label": "Page not found"
+    },
+    "subtitle": {
+      "label": "You stepped on a mine. This page doesn't exist."
+    },
+    "backHome": {
+      "label": "Go back home"
+    }
   },
   "error500": {
-    "title": "Something went wrong",
-    "subtitle": "An unexpected server error happened while loading this page.",
-    "tryAgain": "Try again",
-    "backHome": "Go back home"
+    "title": {
+      "label": "Something went wrong"
+    },
+    "subtitle": {
+      "label": "An unexpected server error happened while loading this page."
+    },
+    "tryAgain": {
+      "label": "Try again"
+    },
+    "backHome": {
+      "label": "Go back home"
+    }
   },
   "minesweeper": {
-    "pageTitle": "Minesweeper",
-    "back": "← Back",
-    "reset": "Reset",
-    "won": "You cleared the field!",
-    "lost": "Boom! You hit a mine.",
-    "hint": "left click: reveal · right click: flag",
+    "pageTitle": {
+      "label": "Minesweeper"
+    },
+    "back": {
+      "label": "← Back"
+    },
+    "reset": {
+      "label": "Reset"
+    },
+    "won": {
+      "label": "You cleared the field!"
+    },
+    "lost": {
+      "label": "Boom! You hit a mine."
+    },
+    "hint": {
+      "label": "left click: reveal · right click: flag"
+    },
     "difficulties": {
-      "easy": "Easy",
-      "medium": "Medium"
+      "easy": {
+        "label": "Easy"
+      },
+      "medium": {
+        "label": "Medium"
+      }
     }
   },
   "footer": {
-    "description": "Full-stack developer and designer creating beautiful, functional web experiences.",
-    "connections": "Connections",
-    "navigation": "Navigation",
-    "email": "email",
-    "linkedin": "linkedin",
-    "github": "github",
-    "authorName": "Laercio Rios"
+    "description": {
+      "label": "Full-stack developer and designer creating beautiful, functional web experiences."
+    },
+    "connections": {
+      "label": "Connections"
+    },
+    "navigation": {
+      "label": "Navigation"
+    },
+    "email": {
+      "label": "email"
+    },
+    "linkedin": {
+      "label": "linkedin"
+    },
+    "github": {
+      "label": "github"
+    },
+    "authorName": {
+      "label": "Laercio Rios"
+    }
   }
 }

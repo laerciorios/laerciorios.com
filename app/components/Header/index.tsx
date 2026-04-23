@@ -12,9 +12,9 @@ export default async function Header() {
   const t = await getTranslations("navigation");
 
   const navItems = [
-    { text: t("home"), href: "/" },
-    { text: t("projects"), href: "/projects" },
-    { text: t("articles"), href: "/articles" },
+    { text: t("home.label"), href: "/" },
+    { text: t("projects.label"), href: "/projects" },
+    { text: t("articles.label"), href: "/articles" },
   ];
 
   return (

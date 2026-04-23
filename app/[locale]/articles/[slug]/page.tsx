@@ -37,7 +37,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: article.title,
     description: article.description,
-    authors: [{ name: "Laercio Rios" }],
     alternates: {
       canonical,
       languages: {
@@ -74,7 +73,7 @@ export default async function ArticlePage({ params }: Props) {
   return (
     <article className={styles.article}>
       <Link href="/articles" className={styles.back}>
-        ← {t("backToArticles")}
+        ← {t("backToArticles.label")}
       </Link>
 
       <header className={styles.header}>

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "articles" });
 
   return {
-    title: t("pageTitle"),
+    title: t("pageTitle.label"),
     description: "Articles and writings by Laercio Rios on software development.",
     alternates: {
       canonical: localizedUrl(locale, "/articles"),
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       url: localizedUrl(locale, "/articles"),
-      title: t("pageTitle"),
+      title: t("pageTitle.label"),
     },
   };
 }
@@ -41,20 +41,20 @@ export default async function Articles({ params }: Props) {
     <div className={styles.page}>
       <div className={styles.header}>
         <Typography variant="h1" className={styles.pageTitle}>
-          {t("pageTitle")}
+          {t("pageTitle.label")}
         </Typography>
         <Typography variant="body2" className={styles.subtitle}>
-          {t("pageSubtitle")}
+          {t("pageSubtitle.label")}
         </Typography>
       </div>
 
       <div className={styles.section}>
         <Typography variant="h3" as="h2" className={styles.sectionTitle}>
-          {t("allArticles")}
+          {t("allArticles.label")}
         </Typography>
         {articles.length === 0 ? (
           <Typography variant="body1" className={styles.empty}>
-            {t("emptyState")}
+            {t("emptyState.label")}
           </Typography>
         ) : (
           <div className={styles.grid}>

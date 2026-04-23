@@ -214,9 +214,9 @@ export default function MinesweeperPage() {
     <div className={styles.page}>
       <div className={styles.topBar}>
         <Link href="/" className={styles.backLink}>
-          {t("back")}
+          {t("back.label")}
         </Link>
-        <h1 className={styles.pageTitle}>{t("pageTitle")}</h1>
+        <h1 className={styles.pageTitle}>{t("pageTitle.label")}</h1>
       </div>
 
       <div className={styles.game}>
@@ -224,7 +224,7 @@ export default function MinesweeperPage() {
           <span className={styles.counter}>
             {String(Math.max(remaining, 0)).padStart(3, "0")}
           </span>
-          <button className={styles.resetBtn} onClick={() => reset()} aria-label={t("reset")}>
+          <button className={styles.resetBtn} onClick={() => reset()} aria-label={t("reset.label")}>
             {status === "won" ? (
               <Trophy width={20} height={20} />
             ) : status === "lost" ? (
@@ -285,18 +285,18 @@ export default function MinesweeperPage() {
               className={`${styles.diffBtn} ${i === diffIdx ? styles.diffActive : ""}`}
               onClick={() => pickDifficulty(i)}
             >
-              {t(`difficulties.${d.label}`)}
+              {t(`difficulties.${d.label}.label`)}
             </button>
           ))}
         </div>
 
         {(status === "won" || status === "lost") && (
           <p className={`${styles.statusMsg} ${status === "won" ? styles.statusWon : styles.statusLost}`}>
-            {status === "won" ? t("won") : t("lost")}
+            {status === "won" ? t("won.label") : t("lost.label")}
           </p>
         )}
 
-        <p className={styles.hint}>{t("hint")}</p>
+        <p className={styles.hint}>{t("hint.label")}</p>
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ export default async function Experiences() {
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <Typography variant="h2" as="h2" className={styles.title}>
-          {tHome("experiencesTitle")}
+          {tHome("experiencesTitle.label")}
         </Typography>
         <a
           href={`/cv/${cvFile}.pdf`}
@@ -25,7 +25,7 @@ export default async function Experiences() {
           rel="noopener noreferrer"
           className={styles.cvLink}
         >
-          {t("seeFullResume")}
+          {t("seeFullResume.label")}
           <ArrowRight width={24} height={24} />
         </a>
       </div>
@@ -34,7 +34,7 @@ export default async function Experiences() {
         const startFormatted = format.dateTime(exp.startDate, "monthYear");
         const endFormatted = exp.endDate
           ? format.dateTime(exp.endDate, "monthYear")
-          : t("current");
+          : t("current.label");
         const dateRange = `${startFormatted} - ${endFormatted}`;
 
         return (
@@ -50,11 +50,11 @@ export default async function Experiences() {
             responsibilities={t(`${exp.title}.responsibilities.label`)}
             stack={exp.stack}
             isLast={index === experiences.length - 1}
-            seeMoreLabel={t("seeMore")}
-            seeLessLabel={t("seeLess")}
-            aboutLabel={t("aboutLabel")}
-            responsibilitiesLabel={t("responsibilitiesLabel")}
-            stackLabel={t("stackLabel")}
+            seeMoreLabel={t("seeMore.label")}
+            seeLessLabel={t("seeLess.label")}
+            aboutLabel={t("aboutLabel.label")}
+            responsibilitiesLabel={t("responsibilitiesLabel.label")}
+            stackLabel={t("stackLabel.label")}
           />
         );
       })}

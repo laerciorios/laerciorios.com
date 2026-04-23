@@ -15,12 +15,12 @@ export default async function NotFound() {
       </div>
 
       <div className={styles.message}>
-        <p className={styles.title}>{t("title")}</p>
-        <p className={styles.subtitle}>{t("subtitle")}</p>
+        <p className={styles.title}>{t("title.label")}</p>
+        <p className={styles.subtitle}>{t("subtitle.label")}</p>
       </div>
 
       <Link href="/" className={styles.back}>
-        {t("backHome")}
+        {t("backHome.label")}
       </Link>
     </div>
   );

@@ -16,11 +16,11 @@ export default async function FeaturedProjects() {
     <div className={styles.wrapper}>
       <div className={styles.header}>
         <Typography variant="h2" as="h2" className={styles.title}>
-          {tHome("featuredProjectsTitle")}
+          {tHome("featuredProjectsTitle.label")}
         </Typography>
         <Link href="/projects" className={styles.seeAll}>
           <Typography variant="body1" as="span" className={styles.seeAllLabel}>
-            {tHome("seeAllProjects")}
+            {tHome("seeAllProjects.label")}
           </Typography>
           <ArrowRight className={styles.seeAllIcon} aria-hidden />
         </Link>

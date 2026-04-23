@@ -22,7 +22,7 @@ export async function generateMetadata({
 
   return {
     title: { absolute: "Laercio Rios" },
-    description: t("heroSubtitle"),
+    description: t("heroSubtitle.label"),
     alternates: {
       canonical: localizedUrl(locale),
       languages: {
@@ -33,8 +33,8 @@ export async function generateMetadata({
     },
     openGraph: {
       url: localizedUrl(locale),
-      title: t("name"),
-      description: t("heroSubtitle"),
+      title: t("name.label"),
+      description: t("heroSubtitle.label"),
     },
   };
 }
@@ -45,7 +45,7 @@ export default async function Home({ params }: HomePageProps) {
 
   return (
     <div className={styles.homePage}>
-      <Hero name={t("name")} jobTitle={t("jobTitle")} />
+      <Hero name={t("name.label")} jobTitle={t("jobTitle.label")} />
 
       <div className={styles.sections}>
         <About />
@@ -59,12 +59,12 @@ export default async function Home({ params }: HomePageProps) {
         </section>
 
         <section className={`${styles.section} ${styles.sectionWithTitle}`}>
-          <SectionHeader title={t("formationsTitle")} />
+          <SectionHeader title={t("formationsTitle.label")} />
           <Formations locale={locale} />
         </section>
 
         <section className={`${styles.section} ${styles.sectionWithTitle}`}>
-          <SectionHeader title={t("talksTitle")} />
+          <SectionHeader title={t("talksTitle.label")} />
           <Talks locale={locale} />
         </section>
       </div>

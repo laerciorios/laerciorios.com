@@ -68,7 +68,7 @@ export default function LanguageButton() {
       <button
         className={styles.languageButton}
         onClick={toggleDropdown}
-        aria-label={t("switch")}
+        aria-label={t("switch.label")}
       >
         <Languages />
         <Typography variant="body1">{localeLabel}</Typography>

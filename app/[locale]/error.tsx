@@ -25,19 +25,19 @@ export default function ErrorPage({ error, reset }: ErrorPageProps) {
       </Typography>
 
       <div className={styles.message}>
-        <Typography variant="body1">{t("title")}</Typography>
+        <Typography variant="body1">{t("title.label")}</Typography>
         <Typography variant="body2" className={styles.subtitle}>
-          {t("subtitle")}
+          {t("subtitle.label")}
         </Typography>
       </div>
 
       <div className={styles.actions}>
         <button type="button" className={styles.retry} onClick={reset}>
-          {t("tryAgain")}
+          {t("tryAgain.label")}
         </button>
 
         <Link href="/" className={styles.back}>
-          {t("backHome")}
+          {t("backHome.label")}
         </Link>
       </div>
     </div>

@@ -12,27 +12,27 @@ export default async function Footer() {
   ]);
 
   const navItems = [
-    { text: tNav("home"), href: "/" },
-    { text: tNav("projects"), href: "/projects" },
-    { text: tNav("articles"), href: "/articles" },
+    { text: tNav("home.label"), href: "/" },
+    { text: tNav("projects.label"), href: "/projects" },
+    { text: tNav("articles.label"), href: "/articles" },
   ];
 
   const connections = [
     {
       icon: <Mail />,
-      label: tFooter("email"),
+      label: tFooter("email.label"),
       value: "contact@laerciorios.com",
       href: "mailto:contact@laerciorios.com",
     },
     {
       icon: <Linkedin />,
-      label: tFooter("linkedin"),
+      label: tFooter("linkedin.label"),
       value: "/laerciorios",
       href: "https://linkedin.com/in/laerciorios",
     },
     {
       icon: <Github />,
-      label: tFooter("github"),
+      label: tFooter("github.label"),
       value: "/laerciorios",
       href: "https://github.com/laerciorios",
     },
@@ -52,7 +52,7 @@ export default async function Footer() {
               </Typography>
             </Link>
             <Typography variant="body2" className={styles.description}>
-              {tFooter("description")}
+              {tFooter("description.label")}
             </Typography>
             <div className={styles.connections}>
               <Typography
@@ -60,7 +60,7 @@ export default async function Footer() {
                 as="span"
                 className={styles.sectionLabel}
               >
-                {tFooter("connections")}
+                {tFooter("connections.label")}
               </Typography>
               <div className={styles.connectionList}>
                 {connections.map((item) => (
@@ -92,7 +92,7 @@ export default async function Footer() {
               as="span"
               className={styles.sectionLabel}
             >
-              {tFooter("navigation")}
+              {tFooter("navigation.label")}
             </Typography>
             <nav className={styles.navList}>
               {navItems.map((item) => (
@@ -111,7 +111,7 @@ export default async function Footer() {
         </div>
         <div className={styles.bottom}>
           <Typography variant="body3" className={styles.copyright}>
-            {year} <span aria-hidden="true">·</span> {tFooter("authorName")}
+            {year} <span aria-hidden="true">·</span> {tFooter("authorName.label")}
           </Typography>
         </div>
       </div>
