@@ -13,26 +13,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: localizedUrl(locale, route),
       alternates: {
         languages: Object.fromEntries(
-          locales.map((l) => [l, localizedUrl(l, route)])
+          locales.map((l) => [l, localizedUrl(l, route)]),
         ),
       },
-      changeFrequency: route === "" ? ("weekly" as const) : ("monthly" as const),
+      changeFrequency:
+        route === "" ? ("weekly" as const) : ("monthly" as const),
       priority: route === "" && locale === defaultLocale ? 1 : 0.8,
-    }))
+    })),
   );
 
   const articleEntries: MetadataRoute.Sitemap = articles.flatMap((article) =>
     locales.map((locale) => ({
-      url: article.canonical_url ?? localizedUrl(locale, `/articles/${article.slug}`),
+      url: localizedUrl(locale, `/articles/${article.slug}`),
       alternates: {
         languages: Object.fromEntries(
-          locales.map((l) => [l, localizedUrl(l, `/articles/${article.slug}`)])
+          locales.map((l) => [l, localizedUrl(l, `/articles/${article.slug}`)]),
         ),
       },
       lastModified: new Date(article.date),
       changeFrequency: "yearly" as const,
       priority: 0.6,
-    }))
+    })),
   );
 
   return [...staticEntries, ...articleEntries];
