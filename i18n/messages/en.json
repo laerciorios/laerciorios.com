@@ -58,6 +58,14 @@
         "label": "Platform for managing and organizing boxes for Pokémon Home. The project served as a laboratory for practices of AI-assisted development, using patterns such as spec-driven-development with the OpenSpec framework."
       }
     },
+    "socioEnvironmentalObservatory": {
+      "title": {
+        "label": "Socio-Environmental Observatory"
+      },
+      "description": {
+        "label": "Geospatial platform focused on monitoring and understanding the main socio-environmental challenges in Brazil. I was involved in the development and management of new features, as well as implementing unit tests to ensure code quality."
+      }
+    },
     "theLegacyOfManoel": {
       "title": {
         "label": "The Legacy of Manoel"

@@ -57,8 +57,18 @@ export const projects: Project[] = [
     highlight: true,
   },
   {
+    title: "socioEnvironmentalObservatory",
+    link: "https://plataforma.observatoriosocioambiental.com.br/",
+    year: "2025-2026",
+    skills: ["React", "TypeScript", "Styled Components", "Unit Testing"],
+    type: "professional",
+    bond: "Geodatin",
+    images: ["conflicts-indicator.png"],
+    highlight: false,
+  },
+  {
     title: "ecope",
-    year: "2023-2025",
+    year: "2023-2026",
     skills: ["React", "TypeScript", "Styled Components"],
     type: "professional",
     bond: "Geodatin",
@@ -77,7 +87,7 @@ export const projects: Project[] = [
   },
   {
     title: "libScrapper",
-    year: "2024",
+    year: "2024-2026",
     skills: ["Node.JS", "Typescript", "Web Scraping"],
     type: "professional",
     bond: "Geodatin",

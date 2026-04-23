@@ -66,6 +66,14 @@
         "label": "Um jogo narrativo curto. O jogo conta a história sobre os primeiros moradores da cidade de Pintadas no Brasil com trechos de minigames entre as cenas. Neste projeto eu trabalhei sozinho, como game designer e programador, além de criar as artes."
       }
     },
+    "socioEnvironmentalObservatory": {
+      "title": {
+        "label": "Observatório Socioambiental"
+      },
+      "description": {
+        "label": "Plataforma geoespacial focada em monitorar e compreender os principais desafios socioambientais no Brasil. Atuei no desenvolvimento e gerenciamento de novas funcionalidades, além de implementar testes unitários para garantir a qualidade do código."
+      }
+    },
     "ecope": {
       "title": {
         "label": "Plataforma Ecológico-Econômica de Pernambuco"
