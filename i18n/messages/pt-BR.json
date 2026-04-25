@@ -82,6 +82,23 @@
         "label": "Acadêmico"
       }
     },
+    "filters": {
+      "type": {
+        "label": "Tipo"
+      },
+      "bond": {
+        "label": "Vínculo"
+      },
+      "clear": {
+        "label": "Limpar"
+      },
+      "clearAll": {
+        "label": "Limpar tudo"
+      },
+      "empty": {
+        "label": "Nenhum projeto corresponde aos filtros selecionados."
+      }
+    },
     "portfolioV3": {
       "title": {
         "label": "Site Pessoal v3"

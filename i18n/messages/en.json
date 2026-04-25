@@ -82,6 +82,23 @@
         "label": "Academic"
       }
     },
+    "filters": {
+      "type": {
+        "label": "Type"
+      },
+      "bond": {
+        "label": "Bond"
+      },
+      "clear": {
+        "label": "Clear"
+      },
+      "clearAll": {
+        "label": "Clear all"
+      },
+      "empty": {
+        "label": "No projects match the selected filters."
+      }
+    },
     "portfolioV3": {
       "title": {
         "label": "Personal Website v3"

@@ -1,0 +1,241 @@
+.filtersBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.dropdownContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  height: 2rem;
+  padding: 0 0.625rem;
+  background: transparent;
+  border: var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition-default);
+  font-family: inherit;
+}
+
+.trigger:hover {
+  background-color: var(--color-surface);
+  color: var(--text-primary-strong);
+}
+
+.triggerActive {
+  background-color: var(--brand-soft);
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.triggerActive:hover {
+  background-color: var(--brand-soft);
+  color: var(--brand);
+}
+
+.count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.375rem;
+  border-radius: 999px;
+  background: var(--brand);
+  color: var(--color-bg);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.chevron {
+  width: 1rem;
+  height: 1rem;
+  transition: var(--transition-default);
+}
+
+.chevron path {
+  stroke: var(--text-primary);
+}
+
+.triggerActive .chevron path {
+  stroke: var(--brand);
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  background: var(--color-bg);
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  min-width: 12rem;
+  max-width: 18rem;
+  z-index: var(--z-dropdown);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  animation: fadeInUp var(--duration-fast) ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  max-height: 16rem;
+  overflow-y: auto;
+}
+
+.option {
+  width: 100%;
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.8125rem;
+  transition: var(--transition-fast);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.option:hover {
+  background-color: var(--color-surface);
+  color: var(--text-primary-strong);
+}
+
+.option:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: -2px;
+}
+
+.optionActive {
+  background-color: var(--brand-soft);
+  color: var(--brand);
+  font-weight: 500;
+}
+
+.optionActive:hover {
+  background-color: var(--brand-soft);
+  color: var(--brand);
+}
+
+.optionLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.optionIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.optionIcon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.checkmark {
+  font-size: 0.75rem;
+  color: var(--brand);
+  flex-shrink: 0;
+}
+
+.clearButton {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.875rem;
+  background: transparent;
+  border: none;
+  border-bottom: var(--border);
+  cursor: pointer;
+  color: var(--text-muted);
+  font-family: inherit;
+  transition: var(--transition-fast);
+}
+
+.clearButton:hover {
+  color: var(--text-primary);
+  background-color: var(--color-surface);
+}
+
+.clearButton svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.clearButton svg path {
+  stroke: currentColor;
+}
+
+.clearAllButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  height: 2rem;
+  padding: 0 0.625rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+  font-family: inherit;
+  transition: var(--transition-fast);
+  border-radius: var(--radius-md);
+}
+
+.clearAllButton:hover {
+  color: var(--text-primary);
+  background-color: var(--color-surface);
+}
+
+.clearAllButton svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.clearAllButton svg path {
+  stroke: currentColor;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.empty {
+  color: var(--text-muted);
+  text-align: left;
+  padding: 2rem 0;
+}
