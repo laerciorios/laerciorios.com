@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: flex-start;
   gap: 1rem;
-  padding: 1rem 2rem;
+  padding: 1rem;
   border-radius: var(--radius-lg);
   border: var(--border);
   background-color: var(--color-surface);
@@ -22,6 +22,7 @@
   height: 5rem;
   border: var(--border);
   overflow: hidden;
+  border-radius: 0.5rem;
 }
 
 .thumbnailImage {
@@ -51,18 +52,18 @@
   min-width: 0;
 }
 
-.theme {
-  color: var(--brand);
-  white-space: nowrap;
-  text-align: left;
-}
-
-.metaRow {
+.themeRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   white-space: nowrap;
+}
+
+.theme {
+  color: var(--brand);
+  white-space: nowrap;
+  text-align: left;
 }
 
 .title {

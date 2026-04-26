@@ -8,9 +8,18 @@
 
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }
 
 .title {
@@ -32,7 +41,7 @@
 }
 
 .seeAllLabel {
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .seeAllIcon {
@@ -42,7 +51,7 @@
 }
 
 .seeAllIcon path {
-  stroke: var(--text-primary);
+  stroke: var(--text-secondary);
 }
 
 /* Cards grid */

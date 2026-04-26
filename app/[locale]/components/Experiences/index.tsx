@@ -25,8 +25,10 @@ export default async function Experiences() {
           rel="noopener noreferrer"
           className={styles.cvLink}
         >
-          {t("seeFullResume.label")}
-          <ArrowRight width={24} height={24} />
+          <Typography variant="body1" as="span" className={styles.cvLinkLabel}>
+            {t("seeFullResume.label")}
+          </Typography>
+          <ArrowRight className={styles.cvLinkIcon} aria-hidden />
         </a>
       </div>
       <div className={styles.list}>

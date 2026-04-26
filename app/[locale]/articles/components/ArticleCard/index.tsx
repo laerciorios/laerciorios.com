@@ -34,19 +34,19 @@ export default async function ArticleCard({ article, locale }: ArticleCardProps)
       </div>
 
       <div className={styles.content}>
-        {article.theme && (
-          <Typography variant="caption1" as="span" className={styles.theme}>
-            {article.theme}
-          </Typography>
-        )}
-        <div className={styles.metaRow}>
-          <Typography variant="h4" as="h3" className={styles.title}>
-            {article.title}
-          </Typography>
+        <div className={styles.themeRow}>
+          {article.theme && (
+            <Typography variant="caption1" as="span" className={styles.theme}>
+              {article.theme}
+            </Typography>
+          )}
           <Typography variant="body3" className={styles.date}>
             {formattedDate}
           </Typography>
         </div>
+        <Typography variant="h4" as="h3" className={styles.title}>
+          {article.title}
+        </Typography>
         <Typography variant="body2" className={styles.description}>
           {article.description}
         </Typography>
