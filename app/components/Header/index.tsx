@@ -15,6 +15,9 @@ export default async function Header() {
     { text: t("home.label"), href: "/" },
     { text: t("projects.label"), href: "/projects" },
     { text: t("articles.label"), href: "/articles" },
+    // Hidden until the pages have real content; still reachable by URL.
+    // { text: t("setup.label"), href: "/setup" },
+    // { text: t("recommendations.label"), href: "/recommendations" },
   ];
 
   return (

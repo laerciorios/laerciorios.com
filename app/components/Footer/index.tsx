@@ -15,6 +15,9 @@ export default async function Footer() {
     { text: tNav("home.label"), href: "/" },
     { text: tNav("projects.label"), href: "/projects" },
     { text: tNav("articles.label"), href: "/articles" },
+    // Hidden until the pages have real content; still reachable by URL.
+    // { text: tNav("setup.label"), href: "/setup" },
+    // { text: tNav("recommendations.label"), href: "/recommendations" },
   ];
 
   const connections = [

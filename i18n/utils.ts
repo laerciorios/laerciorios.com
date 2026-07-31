@@ -7,3 +7,7 @@ export function localizedUrl(locale: string, path: string = "") {
     ? `${BASE_URL}${path}`
     : `${BASE_URL}/${locale}${path}`;
 }
+
+export function ogLocale(locale: string) {
+  return locale === "pt-BR" ? "pt_BR" : "en_US";
+}

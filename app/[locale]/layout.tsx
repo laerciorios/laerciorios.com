@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Space_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { hasLocale } from "next-intl";
 import { locales } from "@/i18n/config";
+import { localizedUrl } from "@/i18n/utils";
 import "../globals.css";
 
 export function generateStaticParams() {
@@ -22,40 +23,48 @@ const spaceMono = Space_Mono({
 
 const BASE_URL = "https://laerciorios.com";
 
-const DESCRIPTION =
-  "Laercio Rios — Fullstack software developer building products with care. Portfolio, projects, articles and more.";
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const description = t("siteDescription.label");
+  const isPtBR = locale === "pt-BR";
 
-export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
-  title: {
-    default: "Laercio Rios",
-    template: "%s | Laercio Rios",
-  },
-  description: DESCRIPTION,
-  authors: [{ name: "Laercio Rios", url: BASE_URL }],
-  creator: "Laercio Rios",
-  openGraph: {
-    type: "website",
-    url: BASE_URL,
-    siteName: "Laercio Rios",
-    title: "Laercio Rios",
-    description: DESCRIPTION,
-    locale: "en_US",
-    alternateLocale: "pt_BR",
-  },
-  twitter: {
-    card: "summary_large_image",
-    site: "@laerciorios",
-    creator: "@laerciorios",
-    title: "Laercio Rios",
-    description: DESCRIPTION,
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true },
-  },
-};
+  return {
+    metadataBase: new URL(BASE_URL),
+    title: {
+      default: "Laercio Rios",
+      template: "%s | Laercio Rios",
+    },
+    description,
+    authors: [{ name: "Laercio Rios", url: BASE_URL }],
+    creator: "Laercio Rios",
+    openGraph: {
+      type: "website",
+      url: localizedUrl(locale),
+      siteName: "Laercio Rios",
+      title: "Laercio Rios",
+      description,
+      locale: isPtBR ? "pt_BR" : "en_US",
+      alternateLocale: isPtBR ? "en_US" : "pt_BR",
+    },
+    twitter: {
+      card: "summary_large_image",
+      site: "@laerciorios",
+      creator: "@laerciorios",
+      title: "Laercio Rios",
+      description,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true },
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,

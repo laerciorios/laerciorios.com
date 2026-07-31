@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { localizedUrl } from "@/i18n/utils";
+import { localizedUrl, ogLocale } from "@/i18n/utils";
 import Typography from "@/app/components/Typography";
 import { getAllArticles } from "@/lib/articles";
 import ArticleCard from "./components/ArticleCard";
@@ -12,12 +12,14 @@ interface Props {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "articles" });
+  const [t, tMeta] = await Promise.all([
+    getTranslations({ locale, namespace: "articles" }),
+    getTranslations({ locale, namespace: "metadata" }),
+  ]);
 
   return {
     title: t("pageTitle.label"),
-    description:
-      "Articles and writings by Laercio Rios on software development.",
+    description: tMeta("articlesDescription.label"),
     alternates: {
       canonical: localizedUrl(locale, "/articles"),
       languages: {
@@ -29,6 +31,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       url: localizedUrl(locale, "/articles"),
       title: t("pageTitle.label"),
+      description: tMeta("articlesDescription.label"),
+      locale: ogLocale(locale),
     },
   };
 }

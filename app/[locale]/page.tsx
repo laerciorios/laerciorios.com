@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { localizedUrl } from "@/i18n/utils";
+import { localizedUrl, ogLocale } from "@/i18n/utils";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Formations from "./components/Formations";
@@ -35,6 +35,7 @@ export async function generateMetadata({
       url: localizedUrl(locale),
       title: t("name.label"),
       description: t("heroSubtitle.label"),
+      locale: ogLocale(locale),
     },
   };
 }
@@ -48,7 +49,7 @@ export default async function Home({ params }: HomePageProps) {
       <Hero name={t("name.label")} jobTitle={t("jobTitle.label")} />
 
       <div className={styles.sections}>
-        <About />
+        <About locale={locale} />
 
         <section className={styles.section}>
           <FeaturedProjects />

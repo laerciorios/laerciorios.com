@@ -11,6 +11,12 @@
     },
     "articles": {
       "label": "Artigos"
+    },
+    "setup": {
+      "label": "Setup"
+    },
+    "recommendations": {
+      "label": "Indicações"
     }
   },
   "language": {
@@ -66,7 +72,37 @@
       "label": "Talks"
     }
   },
-  "about": {},
+  "about": {
+    "bio": {
+      "label": "Sou <h>Laercio Rios</h>, desenvolvedor FullStack com foco em <h>JavaScript/TypeScript</h> e experiência em <h>Node.js</h> e <h>React.js</h>. Tenho experiência na criação de APIs Restful com documentação clara e detalhada, integradas a bancos de dados relacionais como <h>PostgreSQL</h>. Também desenvolvo interfaces responsivas e implemento pipelines eficientes de desenvolvimento e deploy (<h>CI/CD</h>) usando <h>Docker</h> e <h>GitHub Actions</h>. Além disso, tenho experiência na criação de testes unitários e de integração, garantindo a qualidade e a robustez das aplicações."
+    }
+  },
+  "metadata": {
+    "siteDescription": {
+      "label": "Laercio Rios — Desenvolvedor de software fullstack construindo produtos com cuidado. Portfólio, projetos, artigos e mais."
+    },
+    "projectsTitle": {
+      "label": "Projetos"
+    },
+    "projectsDescription": {
+      "label": "Portfólio completo de projetos de Laercio Rios — trabalhos pessoais, profissionais e acadêmicos."
+    },
+    "articlesDescription": {
+      "label": "Artigos e textos de Laercio Rios sobre desenvolvimento de software."
+    },
+    "setupTitle": {
+      "label": "Setup"
+    },
+    "setupDescription": {
+      "label": "Hardware, apps e ferramentas que Laercio Rios usa no dia a dia para trabalhar, estudar e criar projetos."
+    },
+    "recommendationsTitle": {
+      "label": "Indicações"
+    },
+    "recommendationsDescription": {
+      "label": "Indicações de Laercio Rios — livros técnicos, literatura e não ficção que valem a leitura."
+    }
+  },
   "projects": {
     "title": {
       "label": "PORTFÓLIO COMPLETO"
@@ -305,6 +341,279 @@
       "label": "Desenvolvimento de Sistemas",
       "description": {
         "label": "Curso técnico em Desenvolvimento de Sistemas, realizado em formato presencial. Durante a formação, adquiri conhecimentos em programação, análise e projeto de sistemas. Além disso, fui aluno monitor, auxiliando os colegas em lógica de programação e outros assuntos, reforçando o aprendizado da turma e desenvolvendo habilidades de mentoria, além de ajudar diretamente os professores com a organização da turma."
+      }
+    }
+  },
+  "setup": {
+    "title": {
+      "label": "MEU SETUP"
+    },
+    "subtitle": {
+      "label": "Hardware, apps e ferramentas que uso no dia a dia para trabalhar, estudar e criar projetos."
+    },
+    "wip": {
+      "label": "Página em construção — os itens abaixo são placeholders e serão preenchidos em breve."
+    },
+    "imagePlaceholder": {
+      "label": "Imagem do produto"
+    },
+    "categories": {
+      "workstation": {
+        "label": "Estação de trabalho"
+      },
+      "editorTerminal": {
+        "label": "Editor & Terminal"
+      },
+      "apps": {
+        "label": "Apps & Produtividade"
+      },
+      "ai": {
+        "label": "IA no fluxo de trabalho"
+      },
+      "services": {
+        "label": "Serviços & Infra"
+      }
+    },
+    "items": {
+      "notebook": {
+        "name": {
+          "label": "Notebook"
+        },
+        "description": {
+          "label": "Placeholder: modelo, ano e configuração da minha máquina principal."
+        }
+      },
+      "monitor": {
+        "name": {
+          "label": "Monitor"
+        },
+        "description": {
+          "label": "Placeholder: modelo, tamanho e resolução do monitor."
+        }
+      },
+      "keyboard": {
+        "name": {
+          "label": "Teclado"
+        },
+        "description": {
+          "label": "Placeholder: teclado que uso, switches e layout."
+        }
+      },
+      "mouse": {
+        "name": {
+          "label": "Mouse"
+        },
+        "description": {
+          "label": "Placeholder: mouse ou trackpad do dia a dia."
+        }
+      },
+      "headset": {
+        "name": {
+          "label": "Headset"
+        },
+        "description": {
+          "label": "Placeholder: fone que uso para foco e reuniões."
+        }
+      },
+      "editor": {
+        "name": {
+          "label": "Editor de código"
+        },
+        "description": {
+          "label": "Placeholder: editor, extensões essenciais e configurações."
+        }
+      },
+      "font": {
+        "name": {
+          "label": "Fonte & Tema"
+        },
+        "description": {
+          "label": "Placeholder: fonte de código e tema que uso no editor e no terminal."
+        }
+      },
+      "terminal": {
+        "name": {
+          "label": "Terminal"
+        },
+        "description": {
+          "label": "Placeholder: emulador de terminal e customizações."
+        }
+      },
+      "shell": {
+        "name": {
+          "label": "Fish Shell"
+        },
+        "description": {
+          "label": "Placeholder: meu shell padrão, plugins e aliases favoritos."
+        }
+      },
+      "browser": {
+        "name": {
+          "label": "Navegador"
+        },
+        "description": {
+          "label": "Placeholder: navegador principal e extensões que uso para desenvolvimento."
+        }
+      },
+      "design": {
+        "name": {
+          "label": "Figma"
+        },
+        "description": {
+          "label": "Placeholder: onde desenho as interfaces dos meus projetos antes de codar."
+        }
+      },
+      "notes": {
+        "name": {
+          "label": "Notas & Organização"
+        },
+        "description": {
+          "label": "Placeholder: app de notas, tarefas e organização pessoal."
+        }
+      },
+      "apiClient": {
+        "name": {
+          "label": "Cliente de API"
+        },
+        "description": {
+          "label": "Placeholder: ferramenta que uso para testar e documentar APIs."
+        }
+      },
+      "claudeCode": {
+        "name": {
+          "label": "Claude Code"
+        },
+        "description": {
+          "label": "Placeholder: como uso agentes de IA no terminal no meu fluxo de desenvolvimento."
+        }
+      },
+      "aiExtras": {
+        "name": {
+          "label": "Outras ferramentas de IA"
+        },
+        "description": {
+          "label": "Placeholder: assistentes e ferramentas de IA que complementam meu fluxo."
+        }
+      },
+      "hosting": {
+        "name": {
+          "label": "Vercel"
+        },
+        "description": {
+          "label": "Placeholder: onde hospedo este site e meus projetos pessoais."
+        }
+      },
+      "git": {
+        "name": {
+          "label": "GitHub"
+        },
+        "description": {
+          "label": "Placeholder: versionamento, CI/CD com GitHub Actions e projetos open source."
+        }
+      },
+      "domain": {
+        "name": {
+          "label": "Domínios & DNS"
+        },
+        "description": {
+          "label": "Placeholder: onde registro e gerencio meus domínios."
+        }
+      }
+    }
+  },
+  "recommendations": {
+    "title": {
+      "label": "INDICAÇÕES"
+    },
+    "subtitle": {
+      "label": "Livros que marcaram minha trajetória e que eu recomendo, separados por categoria."
+    },
+    "wip": {
+      "label": "Página em construção — os itens abaixo são placeholders e serão preenchidos em breve."
+    },
+    "seeBook": {
+      "label": "ver livro"
+    },
+    "coverPlaceholder": {
+      "label": "Capa do livro"
+    },
+    "categories": {
+      "technical": {
+        "label": "Livros técnicos"
+      },
+      "literature": {
+        "label": "Literatura"
+      },
+      "nonFiction": {
+        "label": "Não ficção"
+      }
+    },
+    "items": {
+      "techBook1": {
+        "title": {
+          "label": "Título do livro técnico"
+        },
+        "author": {
+          "label": "Autor"
+        },
+        "description": {
+          "label": "Placeholder: o que aprendi com este livro e por que ele vale a leitura para quem trabalha com software."
+        }
+      },
+      "techBook2": {
+        "title": {
+          "label": "Título do livro técnico"
+        },
+        "author": {
+          "label": "Autor"
+        },
+        "description": {
+          "label": "Placeholder: o que aprendi com este livro e por que ele vale a leitura para quem trabalha com software."
+        }
+      },
+      "litBook1": {
+        "title": {
+          "label": "Título do livro de literatura"
+        },
+        "author": {
+          "label": "Autor"
+        },
+        "description": {
+          "label": "Placeholder: por que esta história me marcou e para quem eu a recomendaria."
+        }
+      },
+      "litBook2": {
+        "title": {
+          "label": "Título do livro de literatura"
+        },
+        "author": {
+          "label": "Autor"
+        },
+        "description": {
+          "label": "Placeholder: por que esta história me marcou e para quem eu a recomendaria."
+        }
+      },
+      "nonFictionBook1": {
+        "title": {
+          "label": "Título do livro de não ficção"
+        },
+        "author": {
+          "label": "Autor"
+        },
+        "description": {
+          "label": "Placeholder: qual ideia deste livro mudou minha forma de pensar."
+        }
+      },
+      "nonFictionBook2": {
+        "title": {
+          "label": "Título do livro de não ficção"
+        },
+        "author": {
+          "label": "Autor"
+        },
+        "description": {
+          "label": "Placeholder: qual ideia deste livro mudou minha forma de pensar."
+        }
       }
     }
   },

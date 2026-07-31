@@ -1,0 +1,171 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Page header: title + description */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pageTitle {
+  text-align: left;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.wip {
+  border: 1px dashed var(--brand);
+  border-radius: var(--radius-md);
+  background: var(--brand-soft);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+/* Category sections */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-default);
+}
+
+.card:hover {
+  border-color: var(--brand);
+}
+
+/* Media area: product image or logo tile */
+
+.media {
+  aspect-ratio: 16 / 9;
+  background-color: var(--color-surface);
+  background-image: radial-gradient(
+    circle,
+    var(--border-subtle) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+}
+
+.logoTile {
+  display: flex;
+  color: var(--brand);
+}
+
+.logoTile svg {
+  width: 44px;
+  height: 44px;
+}
+
+/* Github/Figma icons hardcode stroke="#000"; recolor them to the brand tile color */
+.logoTile svg path {
+  stroke: currentColor;
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed var(--text-muted);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+}
+
+.photoPlaceholder svg {
+  width: 32px;
+  height: 32px;
+}
+
+.photoCaption {
+  color: var(--text-muted);
+}
+
+/* Card body */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+.itemName {
+  color: var(--text-primary-strong);
+  text-align: left;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.itemLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.itemLink:hover {
+  color: var(--brand);
+}
+
+.itemLink svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.itemDescription {
+  color: var(--text-secondary);
+  text-align: left;
+}

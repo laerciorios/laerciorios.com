@@ -6,7 +6,14 @@ import { getAllArticles } from "@/lib/articles";
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles();
 
-  const staticRoutes = ["", "/projects", "/articles"];
+  const staticRoutes = [
+    "",
+    "/projects",
+    "/articles",
+    // Hidden until the pages have real content; still reachable by URL.
+    // "/setup",
+    // "/recommendations",
+  ];
 
   const staticEntries: MetadataRoute.Sitemap = staticRoutes.flatMap((route) =>
     locales.map((locale) => ({

@@ -1,0 +1,158 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* Page header: title + description */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pageTitle {
+  text-align: left;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.wip {
+  border: 1px dashed var(--brand);
+  border-radius: var(--radius-md);
+  background: var(--brand-soft);
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+/* Book category sections */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionTitle {
+  text-align: left;
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem;
+  transition: var(--transition-default);
+}
+
+.card:hover {
+  border-color: var(--brand);
+}
+
+/* Cover: real image or placeholder */
+
+.cover {
+  position: relative;
+  flex-shrink: 0;
+  width: 6rem;
+  aspect-ratio: 2 / 3;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background-color: var(--color-surface);
+  background-image: radial-gradient(
+    circle,
+    var(--border-subtle) 1px,
+    transparent 1px
+  );
+  background-size: 14px 14px;
+}
+
+.coverImage {
+  object-fit: cover;
+}
+
+.coverPlaceholder {
+  position: absolute;
+  inset: 0.375rem;
+  border: 1px dashed var(--text-muted);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.coverPlaceholder svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.coverCaption {
+  font-size: 0.625rem;
+  line-height: 1.2;
+  padding: 0 0.25rem;
+}
+
+/* Card body */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 0;
+  text-align: left;
+}
+
+.bookTitle {
+  color: var(--text-primary-strong);
+  text-align: left;
+}
+
+.bookAuthor {
+  color: var(--text-muted);
+  text-align: left;
+}
+
+.bookComment {
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.itemLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  align-self: flex-start;
+  margin-top: 0.25rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.itemLink:hover {
+  color: var(--brand);
+}
+
+.itemLink svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}

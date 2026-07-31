@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Laercio Rios — Software Engineer";
+export const alt = "Laercio Rios";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -30,7 +30,17 @@ async function loadSpaceMono() {
   }
 }
 
-export default async function Image() {
+export default async function Image({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const isPtBR = locale === "pt-BR";
+  const jobTitle = isPtBR ? "Engenheiro de Software" : "Software Engineer";
+  const subtitle = isPtBR
+    ? "Desenvolvedor Full Stack · Portfólio, Projetos e Artigos"
+    : "Full Stack Developer · Portfolio, Projects & Articles";
   const fonts = await loadSpaceMono();
 
   return new ImageResponse(
@@ -122,7 +132,7 @@ export default async function Image() {
                   display: "flex",
                 }}
               >
-                Software Engineer
+                {jobTitle}
               </div>
             </div>
 
@@ -134,7 +144,7 @@ export default async function Image() {
                 display: "flex",
               }}
             >
-              Full Stack Developer · Portfolio, Projects &amp; Articles
+              {subtitle}
             </div>
           </div>
 

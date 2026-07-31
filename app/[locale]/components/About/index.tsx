@@ -1,11 +1,18 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import styles from "./styles.module.css";
 
 function H(props: { children: React.ReactNode }) {
   return <span className={styles.highlight}>{props.children}</span>;
 }
 
-export default function About() {
+interface AboutProps {
+  locale: string;
+}
+
+export default async function About({ locale }: AboutProps) {
+  const t = await getTranslations({ locale, namespace: "about" });
+
   return (
     <section className={styles.about}>
       <div className={styles.imageWrapper}>
@@ -18,15 +25,7 @@ export default function About() {
         />
       </div>
       <p className={styles.bio}>
-        I&apos;m <H>Laercio Rios</H>, I&apos;m a FullStack developer focused on{" "}
-        <H>JavaScript/TypeScript</H>, with experience in <H>Node.js</H> and{" "}
-        <H>React.js</H>. I have experience creating Restful APIs with clear and
-        detailed documentation integrated with relational databases like{" "}
-        <H>PostgreSQL</H>. I also have experience developing responsive
-        interfaces and implementing efficient development and deployment
-        pipelines (<H>CI/CD</H>) using <H>Docker</H> and <H>GitHub Actions</H>.
-        In addition, I have experience creating unit and integration tests,
-        ensuring the quality and robustness of the applications.
+        {t.rich("bio.label", { h: (chunks) => <H>{chunks}</H> })}
       </p>
     </section>
   );

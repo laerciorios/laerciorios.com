@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { localizedUrl } from "@/i18n/utils";
+import { localizedUrl, ogLocale } from "@/i18n/utils";
 import Typography from "@/app/components/Typography";
 import { projects, type Project } from "@/data/projects";
 import ProjectCard from "./components/ProjectCard";
@@ -17,11 +17,11 @@ export async function generateMetadata({
   params,
 }: ProjectsPageProps): Promise<Metadata> {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
-    title: "Projects",
-    description:
-      "Full portfolio of projects by Laercio Rios — personal, professional and academic work.",
+    title: t("projectsTitle.label"),
+    description: t("projectsDescription.label"),
     alternates: {
       canonical: localizedUrl(locale, "/projects"),
       languages: {
@@ -32,7 +32,9 @@ export async function generateMetadata({
     },
     openGraph: {
       url: localizedUrl(locale, "/projects"),
-      title: "Projects — Laercio Rios",
+      title: `${t("projectsTitle.label")} — Laercio Rios`,
+      description: t("projectsDescription.label"),
+      locale: ogLocale(locale),
     },
   };
 }
