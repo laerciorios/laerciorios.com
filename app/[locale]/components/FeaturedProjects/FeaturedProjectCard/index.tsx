@@ -29,7 +29,7 @@ export default function FeaturedProjectCard({
             src={image}
             alt={title}
             fill
-            sizes="(min-width: 640px) 50vw, 100vw"
+            sizes="(min-width: 824px) 340px, (min-width: 640px) 50vw, calc(100vw - 4.5rem)"
             className={styles.thumbnail}
           />
         ) : (

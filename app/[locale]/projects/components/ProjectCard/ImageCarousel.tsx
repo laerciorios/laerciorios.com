@@ -24,7 +24,7 @@ export default function ImageCarousel({ images, projectTitle }: ImageCarouselPro
           src={`/images/projects/${projectTitle}/${images[0]}`}
           alt={projectTitle}
           fill
-          sizes="(max-width: 640px) 100vw, 260px"
+          sizes="(min-width: 640px) 313px, calc(100vw - 4.5rem)"
           className={styles.carouselImage}
         />
       </div>
@@ -40,7 +40,7 @@ export default function ImageCarousel({ images, projectTitle }: ImageCarouselPro
         src={`/images/projects/${projectTitle}/${images[index]}`}
         alt={`${projectTitle} screenshot ${index + 1}`}
         fill
-        sizes="(max-width: 640px) 100vw, 260px"
+        sizes="(min-width: 640px) 313px, calc(100vw - 4.5rem)"
         className={styles.carouselImage}
       />
       <button className={`${styles.carouselBtn} ${styles.carouselBtnLeft}`} onClick={prev} aria-label="Previous image">

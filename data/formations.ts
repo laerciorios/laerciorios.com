@@ -6,6 +6,7 @@ interface Formation {
   startYear: string;
   endYear?: string;
   status: "completed" | "ongoing" | "locked";
+  statusDetail?: "transfer";
 }
 
 export const formations: Formation[] = [
@@ -27,6 +28,7 @@ export const formations: Formation[] = [
     startYear: "2017",
     endYear: "2024",
     status: "locked",
+    statusDetail: "transfer",
   },
   {
     title: "systemDevelopment",

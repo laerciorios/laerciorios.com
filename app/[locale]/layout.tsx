@@ -30,13 +30,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
+  const title = t("siteTitle.label");
   const description = t("siteDescription.label");
   const isPtBR = locale === "pt-BR";
 
   return {
     metadataBase: new URL(BASE_URL),
     title: {
-      default: "Laercio Rios",
+      default: title,
       template: "%s | Laercio Rios",
     },
     description,
@@ -46,7 +47,7 @@ export async function generateMetadata({
       type: "website",
       url: localizedUrl(locale),
       siteName: "Laercio Rios",
-      title: "Laercio Rios",
+      title,
       description,
       locale: isPtBR ? "pt_BR" : "en_US",
       alternateLocale: isPtBR ? "en_US" : "pt_BR",
@@ -55,7 +56,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       site: "@laerciorios",
       creator: "@laerciorios",
-      title: "Laercio Rios",
+      title,
       description,
     },
     robots: {

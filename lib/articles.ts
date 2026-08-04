@@ -10,6 +10,7 @@ export interface ArticleMetadata {
   theme?: string;
   thumbnail?: string;
   canonical_url?: string;
+  featured?: boolean;
 }
 
 export interface Article extends ArticleMetadata {
@@ -32,6 +33,22 @@ export function getAllArticles(): ArticleMetadata[] {
   return articles.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
+}
+
+/**
+ * Articles to surface on the home page: every article flagged as `featured` in
+ * its front matter, followed by the most recent ones that aren't already there.
+ */
+export function getHighlightedArticles(latestCount = 3): ArticleMetadata[] {
+  const articles = getAllArticles();
+  const featured = articles.filter((article) => article.featured);
+  const featuredSlugs = new Set(featured.map((article) => article.slug));
+
+  const latest = articles
+    .filter((article) => !featuredSlugs.has(article.slug))
+    .slice(0, latestCount);
+
+  return [...featured, ...latest];
 }
 
 export function getArticleBySlug(slug: string): Article | null {

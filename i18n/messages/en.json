@@ -70,6 +70,12 @@
     },
     "talksTitle": {
       "label": "Talks"
+    },
+    "articlesTitle": {
+      "label": "Articles"
+    },
+    "seeAllArticles": {
+      "label": "See all articles"
     }
   },
   "about": {
@@ -78,8 +84,11 @@
     }
   },
   "metadata": {
+    "siteTitle": {
+      "label": "Laercio Rios — Software Engineer"
+    },
     "siteDescription": {
-      "label": "Laercio Rios — Fullstack software developer building products with care. Portfolio, projects, articles and more."
+      "label": "Laercio Rios is a full stack software engineer working with Node.js, TypeScript, React and PostgreSQL. Portfolio, projects, articles and talks."
     },
     "projectsTitle": {
       "label": "Projects"
@@ -324,6 +333,14 @@
       "locked": {
         "label": "Locked"
       }
+    },
+    "statusDetails": {
+      "transfer": {
+        "label": "Transfer"
+      }
+    },
+    "statusWithDetail": {
+      "label": "{status} - {detail}"
     },
     "cc": {
       "label": "Computer Science",
@@ -629,7 +646,7 @@
         "label": "Feira de Santana, Brazil"
       },
       "description": {
-        "label": "The talk addressed the importance of learning the programming basics and making a correlation with cooking. The idea was to show that, just as in cooking, it is necessary to understand the ingredients and their functions to create an elaborate cake, in programming it is necessary to understand the concepts and their applications to create efficient and quality code."
+        "label": "The talk addressed the importance of learning the basics of programming, drawing a correlation with cooking. The idea was to show that, just as in cooking it is necessary to understand the ingredients and their functions to create an elaborate cake, in programming it is necessary to understand the concepts and their applications to create efficient and quality code."
       }
     }
   },

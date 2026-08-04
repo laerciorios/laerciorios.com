@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import { localizedUrl, ogLocale } from "@/i18n/utils";
 import Typography from "@/app/components/Typography";
 import { getAllArticles } from "@/lib/articles";
-import ArticleCard from "./components/ArticleCard";
+import ArticleCard from "@/app/components/ArticleCard";
 import styles from "./page.module.css";
 
 interface Props {

@@ -1,0 +1,63 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Section header row */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+
+.title {
+  margin: 0;
+  text-align: left;
+}
+
+.seeAll {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity var(--duration-fast) ease;
+}
+
+.seeAll:hover {
+  opacity: 0.7;
+}
+
+.seeAllLabel {
+  color: var(--text-secondary);
+}
+
+.seeAllIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+}
+
+.seeAllIcon path {
+  stroke: var(--text-secondary);
+}
+
+/* Cards list */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

@@ -7,6 +7,7 @@ import Formations from "./components/Formations";
 import Experiences from "./components/Experiences";
 import FeaturedProjects from "./components/FeaturedProjects";
 import Talks from "./components/Talks";
+import Articles from "./components/Articles";
 import SectionHeader from "@/app/components/SectionHeader";
 import styles from "./page.module.css";
 
@@ -18,11 +19,13 @@ export async function generateMetadata({
   params,
 }: HomePageProps): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "home" });
+  const t = await getTranslations({ locale, namespace: "metadata" });
+  const title = t("siteTitle.label");
+  const description = t("siteDescription.label");
 
   return {
-    title: { absolute: "Laercio Rios" },
-    description: t("heroSubtitle.label"),
+    title: { absolute: title },
+    description,
     alternates: {
       canonical: localizedUrl(locale),
       languages: {
@@ -33,8 +36,8 @@ export async function generateMetadata({
     },
     openGraph: {
       url: localizedUrl(locale),
-      title: t("name.label"),
-      description: t("heroSubtitle.label"),
+      title,
+      description,
       locale: ogLocale(locale),
     },
   };
@@ -53,6 +56,10 @@ export default async function Home({ params }: HomePageProps) {
 
         <section className={styles.section}>
           <FeaturedProjects />
+        </section>
+
+        <section className={styles.section}>
+          <Articles locale={locale} />
         </section>
 
         <section className={styles.section}>
